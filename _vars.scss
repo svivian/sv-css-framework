@@ -1,0 +1,88 @@
+/*-------------------------*\
+	VARIABLES & FUNCTIONS
+\*-------------------------*/
+
+
+$base-font-size:    14;
+$base-spacing-unit: ($base-font-size * 1.5) +px;
+
+$base-font-family:  "Open Sans", "Ubuntu", "Trebuchet MS", "Helvetica", "Arial", "FreeSans", sans-serif;
+$head-font-family:  "Open Sans Condensed", "Ubuntu", "Trebuchet MS", "Helvetica", "Arial", "FreeSans", sans-serif;
+$mono-font-family:  "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+
+$bg1: #666666;
+$bg2: $bg1 + #080808;
+
+
+/*
+	REQUIRED CSS PREFIXES:
+	box-sizing:      webkit, moz
+	linear-gradient: webkit, moz, o
+	box-shadow:      webkit
+	transition:      webkit, moz, o
+
+	NO PREFIXES REQUIRED:
+	border-radius
+	background-size
+	background-clip
+*/
+
+
+/* Generic mixin for vendor properties. Usage:
+	@include vendor(box-sizing, border-box);
+*/
+@mixin vendor($property, $value){
+	-webkit-#{$property}: $value;
+	   -moz-#{$property}: $value;
+		-ms-#{$property}: $value;
+		 -o-#{$property}: $value;
+			#{$property}: $value;
+}
+
+/* Generic mixin for vendor functions. Usage:
+	@include vendor-func(background-image, linear-gradient(#000, #fff));
+*/
+@mixin vendor-func($property, $func) {
+	#{$property}: -webkit-#{$func};
+	#{$property}:    -moz-#{$func};
+	#{$property}:     -ms-#{$func};
+	#{$property}:      -o-#{$func};
+	#{$property}:         #{$func};
+}
+
+/* Mixin for linear gradients. Usage:
+	@include linear-gradient(#222, #111);
+*/
+@mixin linear-gradient($value...) {
+	background-image: -webkit-linear-gradient($value);
+	background-image:         linear-gradient($value);
+}
+
+/* Mixin for box shadow. Usage:
+	@include box-shadow(0 0 10px #000);
+*/
+@mixin box-shadow($value) {
+	-webkit-box-shadow: $value;
+	        box-shadow: $value;
+}
+
+/* Mixin for box sizing. Usage:
+	@include box-sizing(border-box);
+*/
+@mixin box-sizing($value) {
+	-webkit-box-sizing: $value;
+	   -moz-box-sizing: $value;
+	        box-sizing: $value;
+}
+
+/* Mixin for transitions. Usage:
+	@include transition(all .4s ease-in-out .8s);
+*/
+@mixin transition($value...) {
+	-webkit-transition: $value;
+	   -moz-transition: $value;
+	     -o-transition: $value;
+	        transition: $value;
+}
+
+

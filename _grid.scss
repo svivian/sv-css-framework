@@ -1,0 +1,73 @@
+/*-------------------------*\
+	GRID
+\*-------------------------*/
+
+$grid-width: 1160px;
+
+.colset, .col {
+	@include box-sizing(border-box);
+}
+
+.colset {
+	/*overflow: hidden;*/ /* possibly not necessary */
+	width: 100%;
+	max-width: $grid-width;
+	margin: 0 auto 1rem;
+	padding: 10px;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.col {
+	float: left;
+	padding: 0 10px;
+
+	>:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.col.span1  { width:   8.33%; } /*   75px */
+.col.span2  { width:  16.67%; } /*  170px */
+.col.span3  { width:  25%;    } /*  265px */
+.col.span4  { width:  33.33%; } /*  360px */
+.col.span5  { width:  41.67%; } /*  455px */
+.col.span6  { width:  50%;    } /*  550px */
+.col.span7  { width:  58.33%; } /*  645px */
+.col.span8  { width:  66.67%; } /*  740px */
+.col.span9  { width:  75%;    } /*  835px */
+.col.span10 { width:  83.33%; } /*  930px */
+.col.span11 { width:  91.67%; } /* 1025px */
+.col.span12 { width: 100%;    } /* 1120px */
+
+/*
+	For responsive images we need to set `max-width` to keep them inside our grid, and we need auto
+	 height to maintain the aspect ratio.
+	However, auto height prevents the browser being able to allocate space for the image even with
+	 their width and height explicitly defined in the HTML attributes and at full width.
+	Therefore, we avoid setting `max-width` when the browser is above the grid's max width. The
+	 exact pixel widths at full resolution are listed above.
+*/
+@media handheld, only screen and (max-width: $grid-width) {
+	img, iframe {
+		max-width: 100%;
+		height: auto; /* maintain aspect ratio */
+	}
+}
+
+@media handheld, only screen and (max-width: 767px) {
+	.wrapper {
+		width: 100%;
+		max-width: auto;
+		min-width: auto;
+	}
+	.col.span1, .col.span2, .col.span3, .col.span4, .col.span5, .col.span6,
+	.col.span7, .col.span8, .col.span9, .col.span10, .col.span11, .col.span12 {
+		width: auto;
+		float: none;
+	}
+}
