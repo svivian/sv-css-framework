@@ -4,28 +4,30 @@
 
 /* Variables */
 
-$menu-width: 1020;
-$menu-height: 36;
-$menu-items: 5;
-$menu-item-pad: 10;
-$menu-item-bw: 1;
+$hf-width: 1020;
+$hf-height: 36;
+$hf-items: 5;
+$hf-item-pad: 10;
+$hf-item-bw: 1;
 
-$delay-open: .2s;
-$delay-close: .8s;
+$hf-anim-length: .3s;
+$hf-delay-enter: .2s;
+$hf-delay-exit: .8s;
+$hf-delay-side: .02s;
 
-$menu-corner: 0 0 8px 8px;
+$hf-corner: $base-corner;
+$hf-radius: 0 0 $hf-corner +px $hf-corner +px;
 
 /* Placeholder Selectors (for custom styling) */
 
-%menu-ext-1 {
+%hf-theme-1ful {
 	/* ul */
 	@include linear-gradient(#525252, #404040);
 	border: 1px solid #000;
 	border-top: 0;
-	border-radius: $menu-corner;
-	@include box-shadow(inset 1px 1px 0 rgba(255, 255, 255, .1));
+	border-radius: $hf-radius;
 }
-%menu-ext-2 {
+%hf-theme-1fli {
 	/* ul>li */
 	background-color: transparent;
 	@include box-shadow(inset 1px 1px 0 rgba(255, 255, 255, .1));
@@ -35,15 +37,19 @@ $menu-corner: 0 0 8px 8px;
 	font-weight: bold;
 	text-align: center;
 
+	&:first-child {
+		border-bottom-left-radius: $hf-corner +px;
+	}
 	&:last-child {
 		border-right: 0;
+		border-bottom-right-radius: $hf-corner +px;
 	}
 }
-%menu-ext-3 {
+%hf-theme-2ful {
 	/* ul>li>ul */
 	background: #000 /*rgba(0, 0, 0, .9)*/;
 }
-%menu-ext-4 {
+%hf-theme-2fli {
 	/* ul>li>ul>li */
 	font-weight: normal;
 	font-size: .9em;
@@ -54,9 +60,7 @@ $menu-corner: 0 0 8px 8px;
 
 	>a {
 		display: block;
-		/*width: 100%;
-		height: 100%;*/
-		padding: 0 $menu-item-pad +px;
+		padding: 0 $hf-item-pad +px;
 		color: #fff;
 		text-decoration: none;
 	}
@@ -67,38 +71,49 @@ $menu-corner: 0 0 8px 8px;
 }
 
 
-
+/* TODO: rename to `hyperfish-list` and extract submenu to class instead of nested */
 .main-menu-list {
-	width: $menu-width +px;
-	height: $menu-height +px;
+	width: $hf-width +px;
+	height: $hf-height +px;
 	margin: 0 auto;
 	padding: 0;
-	@extend %menu-ext-1;
+	@extend %hf-theme-1ful;
+
+	&:hover {
+		>li {
+			/* transition out for sibling menus when moving sideways */
+			@include transition(background-color $hf-anim-length ease-in-out $hf-delay-side);
+
+			>ul {
+				@include transition(opacity $hf-anim-length ease-in-out $hf-delay-side, visibility $hf-anim-length ease-in-out $hf-delay-side);
+			}
+		}
+	}
 
 	>li {
 		position: relative;
 		list-style: none;
 		cursor: pointer;
 		float: left;
-		width: (($menu-width / $menu-items) - ($menu-item-pad * 2) - $menu-item-bw) +px;
-		height: $menu-height +px;
-		line-height: $menu-height +px;
-		padding: 0 $menu-item-pad +px;
-		@extend %menu-ext-2;
+		width: (($hf-width / $hf-items) - ($hf-item-pad * 2) - $hf-item-bw) +px;
+		height: $hf-height +px;
+		line-height: $hf-height +px;
+		padding: 0 $hf-item-pad +px;
+		@extend %hf-theme-1fli;
 
 		/* top item transition out */
-		@include transition(background-color .4s ease-in-out $delay-close);
+		@include transition(background-color $hf-anim-length ease-in-out $hf-delay-exit);
 
 		&:hover {
 			background-color: rgba(50, 50, 50, .6);
 			/* top item transition in */
-			@include transition(background-color .4s ease-in-out $delay-open);
+			@include transition(background-color $hf-anim-length ease-in-out $hf-delay-enter);
 
 			>ul {
 				visibility: visible;
 				opacity: 1;
 				/* submenu transition in */
-				@include transition(opacity .4s ease-in-out $delay-open, visibility .4s ease-in-out $delay-open);
+				@include transition(opacity $hf-anim-length ease-in-out $hf-delay-enter, visibility $hf-anim-length ease-in-out $hf-delay-enter);
 			}
 		}
 
@@ -106,21 +121,21 @@ $menu-corner: 0 0 8px 8px;
 			visibility: hidden;
 			opacity: 0;
 			position: absolute;
-			top: $menu-height +px;
+			top: $hf-height +px;
 			left: 0;
 			width: 100%;
 			margin: 0;
 			padding: 0;
-			@extend %menu-ext-3;
+			@extend %hf-theme-2ful;
 
 			/* submenu transition out */
-			@include transition(opacity .4s ease-in-out $delay-close, visibility .4s ease-in-out $delay-close);
+			@include transition(opacity $hf-anim-length ease-in-out $hf-delay-exit, visibility $hf-anim-length ease-in-out $hf-delay-exit);
 
 			>li {
 				list-style: none;
 				padding: 0;
-				line-height: ($menu-height * .75) +px;
-				@extend %menu-ext-4;
+				line-height: ($hf-height * .75) +px;
+				@extend %hf-theme-2fli;
 
 			}
 		}
