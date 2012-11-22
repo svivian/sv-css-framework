@@ -42,14 +42,9 @@ $grid-width: 1160;
 	>:last-child {
 		margin-bottom: 0;
 	}
-
-	/*&.push {
-		float: none;
-		margin: 0 auto;
-	}*/
 }
 
-/* pixel widths give for full size grid */
+/* content pixel widths given for full size grid */
 .span-1  { width:   8.33%; } /*   75px */
 .span-2  { width:  16.67%; } /*  170px */
 .span-3  { width:  25%;    } /*  265px */
