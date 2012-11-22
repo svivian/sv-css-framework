@@ -2,18 +2,31 @@
 	GRID
 \*-------------------------*/
 
-$grid-width: 1160px;
+$grid-width: 1160;
 
-.colset, .col {
+.grid-wrapper, .colset, .col {
 	@include box-sizing(border-box);
 }
 
-.colset {
-	/*overflow: hidden;*/ /* possibly not necessary */
+.grid-wrapper {
 	width: 100%;
-	max-width: $grid-width;
-	margin: 0 auto 1rem;
-	padding: 10px;
+	max-width: $grid-width +px;
+}
+
+.colset {
+	width: 100%;
+	max-width: $grid-width +px;
+	margin: 0 auto 20px;
+	margin: 0 auto 2rem;
+	padding: 0 10px;
+
+	&.span-full {
+		padding: 0 20px;
+	}
+
+	>:last-child {
+		margin-bottom: 0;
+	}
 
 	&:after {
 		content: "";
@@ -29,20 +42,26 @@ $grid-width: 1160px;
 	>:last-child {
 		margin-bottom: 0;
 	}
+
+	/*&.push {
+		float: none;
+		margin: 0 auto;
+	}*/
 }
 
-.col.span1  { width:   8.33%; } /*   75px */
-.col.span2  { width:  16.67%; } /*  170px */
-.col.span3  { width:  25%;    } /*  265px */
-.col.span4  { width:  33.33%; } /*  360px */
-.col.span5  { width:  41.67%; } /*  455px */
-.col.span6  { width:  50%;    } /*  550px */
-.col.span7  { width:  58.33%; } /*  645px */
-.col.span8  { width:  66.67%; } /*  740px */
-.col.span9  { width:  75%;    } /*  835px */
-.col.span10 { width:  83.33%; } /*  930px */
-.col.span11 { width:  91.67%; } /* 1025px */
-.col.span12 { width: 100%;    } /* 1120px */
+/* pixel widths give for full size grid */
+.span-1  { width:   8.33%; } /*   75px */
+.span-2  { width:  16.67%; } /*  170px */
+.span-3  { width:  25%;    } /*  265px */
+.span-4  { width:  33.33%; } /*  360px */
+.span-5  { width:  41.67%; } /*  455px */
+.span-6  { width:  50%;    } /*  550px */
+.span-7  { width:  58.33%; } /*  645px */
+.span-8  { width:  66.67%; } /*  740px */
+.span-9  { width:  75%;    } /*  835px */
+.span-10 { width:  83.33%; } /*  930px */
+.span-11 { width:  91.67%; } /* 1025px */
+.span-12 { width: 100%;    } /* 1120px */
 
 /*
 	For responsive images we need to set `max-width` to keep them inside our grid, and we need auto
@@ -52,22 +71,24 @@ $grid-width: 1160px;
 	Therefore, we avoid setting `max-width` when the browser is above the grid's max width. The
 	 exact pixel widths at full resolution are listed above.
 */
-@media handheld, only screen and (max-width: $grid-width) {
+@media handheld, only screen and (max-width: $grid-width +px) {
+
 	img, iframe {
 		max-width: 100%;
 		height: auto; /* maintain aspect ratio */
 	}
+
 }
 
 @media handheld, only screen and (max-width: 767px) {
-	.wrapper {
-		width: 100%;
-		max-width: auto;
+
+	.colset, .grid-wrapper {
+		max-width: none;
 		min-width: auto;
 	}
-	.col.span1, .col.span2, .col.span3, .col.span4, .col.span5, .col.span6,
-	.col.span7, .col.span8, .col.span9, .col.span10, .col.span11, .col.span12 {
+	.col {
 		width: auto;
 		float: none;
 	}
+
 }
