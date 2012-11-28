@@ -11,7 +11,7 @@ $hf-item-pad: 10;
 $hf-item-bw: 1;
 
 $hf-anim-length: .3s;
-$hf-delay-enter: .2s;
+$hf-delay-enter: .3s;
 $hf-delay-exit: .8s;
 $hf-delay-side: .02s;
 
@@ -56,7 +56,7 @@ $hf-radius: 0 0 $hf-corner +px $hf-corner +px;
 	text-align: left;
 
 	/* submenu list item transition */
-	@include transition(background-color .2s ease-in-out);
+	@include transition(background-color .1s ease-in-out);
 
 	>a {
 		display: block;
