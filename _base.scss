@@ -10,7 +10,7 @@ html {
 
 body, dt, dd,
 /* TODO: remove these as/when styles are written in further down */
-pre, form, fieldset, input, textarea, th, td {
+pre, form, fieldset, input, textarea {
 	margin: 0;
 	padding: 0;
 }
@@ -21,18 +21,19 @@ body, input, select, textarea {
 }
 
 /* HTML5 elements */
-article, aside, details, figcaption, figure, footer,
-header, hgroup, menu, nav, section {
-  display: block;
+header, nav, article, section, aside, footer,
+details, figcaption, figure, hgroup, menu {
+	display: block;
 }
 
 /* downward margins */
 h1, h2, h3, h4, h5, h6,
-p, ul, ol, dl, blockquote,
+p, ul, ol, dl, blockquote {
+	margin: 0 0 $spacing-unit;
+	padding: 0;
+}
 table {
-    margin: 0 0 $spacing-unit;
-    /*margin: 0 0 1rem;*/
-    padding: 0;
+	margin: 0 auto $spacing-unit;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -49,29 +50,33 @@ dt {
 	font-weight: bold;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 h1 {
-	font-size: 36px;
+	font-size: 42px;
 	text-align: center;
 }
 h2 {
-	font-size: 30px;
+	font-size: 28px;
 }
 h3 {
-	font-size: 24px;
+	font-size: 22px;
 }
 h4 {
-	font-size: 20px;
-}
-h5 {
 	font-size: 16px;
 }
-h6 {
+h5 {
 	font-size: 14px;
+}
+h6 {
+	font-size: 12px;
+}
+
+/* tables */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th, td {
+	padding: $table-pad-unit $table-pad-kilo;
 }
 
 
@@ -91,8 +96,42 @@ a {
 }
 
 
+q:before {
+	content: "\2018";
+}
+q:after {
+	content: "\2019";
+}
+q.dbl:before {
+	content: "\201c";
+}
+q.dbl:after {
+	content: "\201d";
+}
+
+small {
+	font-size: 11px;
+}
+/* often used in conjunction with <small> */
+.aside {
+	color: #555753;
+	font-style: normal;
+	font-weight: normal;
+}
+
 abbr[title], dfn[title] {
-  cursor: help;
-  border-bottom: 1px dotted;
+	cursor: help;
+	border-bottom: 1px dotted;
+}
+
+ins {
+	background-color: #d1e1ad;
+	color: #405a04;
+	text-decoration: none;
+}
+del {
+	background-color: #e5bdb2;
+	color: #a82400;
+	text-decoration: line-through;
 }
 
