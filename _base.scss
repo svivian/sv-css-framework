@@ -135,3 +135,9 @@ del {
 	text-decoration: line-through;
 }
 
+hr {
+	height: 1px;
+	margin: $spacing-unit auto;
+	background: #ccc;
+	border: 0;
+}
