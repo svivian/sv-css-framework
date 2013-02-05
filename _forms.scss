@@ -1,0 +1,30 @@
+/*-------------------------*\
+|	FORMS
+\*-------------------------*/
+
+
+
+
+input, select, textarea {
+	font-size: 13px;
+}
+input[type="text"],
+input[type="password"] {
+	padding: 2px;
+	border: 1px solid #d3d7cf;
+	background-color: #ffffff;
+	color: #555753;
+	border-radius: 4px;
+}
+input[type="submit"] {
+	padding: 1px 4px;
+}
+
+
+
+input[type="text"],
+textarea {
+	width: 642px;
+	border: 1px solid #ccc;
+	border-radius: 0;
+}
