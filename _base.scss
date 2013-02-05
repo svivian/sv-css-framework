@@ -27,16 +27,23 @@ details, figcaption, figure, hgroup, menu {
 }
 
 /* downward margins */
-h1, h2, h3, h4, h5, h6,
-p, ul, ol, dl, blockquote {
+%downward-margin {
 	margin: 0 0 $spacing-unit;
 	padding: 0;
 }
-table {
+%downward-margin-center {
 	margin: 0 auto $spacing-unit;
 }
 
+p, ul, ol, dl, blockquote {
+	@extend %downward-margin;
+}
+table {
+	@extend %downward-margin-center;
+}
+
 h1, h2, h3, h4, h5, h6 {
+	@extend %downward-margin;
 	font-family: $hN-font-family;
 	line-height: 1.2;
 	color: $hN-font-color;
@@ -114,7 +121,7 @@ small {
 }
 /* often used in conjunction with <small> */
 .aside {
-	color: #555753;
+	color: #888a85;
 	font-style: normal;
 	font-weight: normal;
 }
@@ -133,5 +140,20 @@ del {
 	background-color: #e5bdb2;
 	color: #a82400;
 	text-decoration: line-through;
+}
+
+
+
+/*-------------------------*\
+	LISTS
+\*-------------------------*/
+
+.blank-list {
+	margin-left: 0;
+
+	>li {
+		margin: 2px 0;
+		list-style: none;
+	}
 }
 
