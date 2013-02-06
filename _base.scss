@@ -4,20 +4,20 @@
 
 /* base font size and vertical rhythm */
 html {
+	font-family: $base-font-family;
 	font-size: $base-font-size +px;
 	line-height: 1.5;
+	color: $base-font-color;
 }
 
 body, dt, dd,
 /* TODO: remove these as/when styles are written in further down */
-pre, form, fieldset, input, textarea {
+pre, form, fieldset {
 	margin: 0;
 	padding: 0;
 }
 
-body, input, select, textarea {
-	font-family: $base-font-family;
-	color: $base-font-color;
+body {
 }
 
 /* HTML5 elements */
@@ -43,18 +43,23 @@ table {
 }
 
 /* headings */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2 {
 	@extend %downward-margin;
 	font-family: $hN-font-family;
 	line-height: 1.2;
 	color: $hN-font-color;
+
+	>a {
+		color: $hN-font-color;
+	}
 }
 
-h1 {
+h1, .h1 {
 	font-size: 42px;
 	text-align: center;
 }
-h2 {
+h2, .h2 {
 	font-size: 28px;
 }
 h3 {
@@ -90,19 +95,23 @@ th, td {
 
 /* links */
 a {
-	color: #215aa4;
+	color: $link-color;
 	text-decoration: none;
 	@include transition(color .2s);
 
 	&:hover, &:active, &:focus {
-		color: #a42121;
-		text-decoration:underline;
+		color: $link-hover-color;
+		text-decoration: underline;
 	}
 	&:active, &:focus {
-		outline:none;
+		outline: none;
 	}
 }
 
+/* clear awful blue border on linked images */
+img {
+	border: 0;
+}
 
 /* basic quote styles */
 q:before {
@@ -119,7 +128,7 @@ q.dbl:after {
 }
 
 small {
-	font-size: 11px;
+	font-size: $font-size-milli +px;
 }
 /* often used in conjunction with <small> */
 .aside {
@@ -130,7 +139,7 @@ small {
 
 abbr[title], dfn[title] {
 	cursor: help;
-	border-bottom: 1px dotted;
+	border-bottom: 1px dotted lighten($base-font-color, 20%);
 }
 
 ins {
@@ -152,8 +161,48 @@ hr {
 }
 
 
+/* form fields */
+
+input, select, textarea {
+	font: inherit;
+	margin: 0;
+	padding: 4px;
+}
+
+/* Any input tag that allows text, e.g.
+	<input type="text">
+	<input type="password">
+	<input type="email">
+*/
+.input-text,
+textarea {
+	/* default browser widths are too small */
+	min-width: 250px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	font-size: $font-size-milli +px;
+}
+
+textarea {
+	min-height: 200px;
+}
+
+select {
+	min-width: 150px;
+}
+
+/* <input type="submit"> */
+.btn {
+    display: inline-block;
+    cursor: pointer;
+	padding: 5px 10px;
+}
+
+
+
 /*-------------------------*\
 |	LISTS
+|	TODO: separate file?
 \*-------------------------*/
 
 .blank-list {
