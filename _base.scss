@@ -42,19 +42,12 @@ table {
 	@extend %downward-margin-center;
 }
 
+/* headings */
 h1, h2, h3, h4, h5, h6 {
 	@extend %downward-margin;
 	font-family: $hN-font-family;
 	line-height: 1.2;
 	color: $hN-font-color;
-}
-
-ul, ol, blockquote, dd {
-	margin-left: $spacing-mega;
-}
-
-dt {
-	font-weight: bold;
 }
 
 h1 {
@@ -77,6 +70,15 @@ h6 {
 	font-size: 12px;
 }
 
+
+ul, ol, blockquote, dd {
+	margin-left: $spacing-mega;
+}
+
+dt {
+	font-weight: bold;
+}
+
 /* tables */
 table {
 	border-collapse: collapse;
@@ -86,8 +88,7 @@ th, td {
 	padding: $table-pad-unit $table-pad-kilo;
 }
 
-
-
+/* links */
 a {
 	color: #215aa4;
 	text-decoration: none;
@@ -151,7 +152,7 @@ hr {
 
 
 /*-------------------------*\
-	LISTS
+|	LISTS
 \*-------------------------*/
 
 .blank-list {
