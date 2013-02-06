@@ -139,7 +139,7 @@ small {
 
 abbr[title], dfn[title] {
 	cursor: help;
-	border-bottom: 1px dotted lighten($base-font-color, 20%);
+	border-bottom: 1px dotted lighten($base-font-color, 40%);
 }
 
 ins {
@@ -189,6 +189,7 @@ textarea {
 
 select {
 	min-width: 150px;
+	font-size: $font-size-milli +px;
 }
 
 /* <input type="submit"> */
