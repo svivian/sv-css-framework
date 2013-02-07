@@ -198,19 +198,3 @@ select {
     cursor: pointer;
 	padding: 5px 10px;
 }
-
-
-
-/*-------------------------*\
-|	LISTS
-|	TODO: separate file?
-\*-------------------------*/
-
-.blank-list {
-	margin-left: 0;
-
-	>li {
-		margin: 2px 0;
-		list-style: none;
-	}
-}

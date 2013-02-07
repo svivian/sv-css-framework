@@ -1,0 +1,105 @@
+/*-------------------------*\
+|	BASE/RESET
+\*-------------------------*/
+
+
+/* Outer block for continue links:
+	<p class="nav-forward"><a href="#">Continue</a></p>
+*/
+.nav-forward {
+	font-weight: bold;
+	text-align: right;
+
+	>a:after {
+		content: "  \00bb";
+	}
+}
+
+/* Special highlighted link */
+.link-focus {
+	font-size: 115%;
+	font-weight: bold;
+	margin-left: $spacing-kilo;
+
+	&:before {
+		content: "\00bb  ";
+	}
+}
+
+
+/* Image helpers:
+	1. Figure block with caption
+		<div class="figure"><img src="" alt=""><br>Caption text</div>
+	2. Basic left/right floats
+		<img class="figure left" src="" alt="">
+*/
+.figure {
+	@extend %downward-margin;
+	color: $light-font-color;
+	font-size: $font-size-milli;
+	text-align: center;
+}
+.figure.left {
+	float: left;
+	margin: 0 $spacing-unit $spacing-unit 0;
+}
+.figure.right {
+	float: right;
+	margin: 0 0 $spacing-unit $spacing-unit;
+}
+
+
+/* Simple list without bullets/numbering */
+.blank-list {
+	margin-left: 0;
+
+	>li {
+		margin: 2px 0;
+		list-style: none;
+	}
+}
+
+
+/* Pagination style - padded numbers for easier clickability; <b> for non-linked elements:
+	<div class="pagination">Page:
+		<a href="page/2"><i class="arrow">&#8249;</i> Prev</a>
+		<a href="/">1</a>
+		<a href="page/2">2</a>
+		<b>3</b>
+		<a href="page/4">4</a>
+		<a href="page/5">5</a>
+		<b>...</b>
+		<a href="page/10">10</a>
+		<a href="page/4">Next <i class="arrow">&#8250;</i></a>
+	</div>
+*/
+.pagination {
+	@extend %downward-margin;
+	text-align: center;
+
+	>a, >b {
+		margin: 0 2px;
+		padding: 3px 8px;
+	}
+	>a {
+		background: #fff;
+		border: 1px solid #ddd;
+		line-height: 2;
+
+		&:hover {
+			background: #fffacd;
+			text-decoration: none;
+		}
+	}
+	.arrow {
+		position: relative;
+		top: 1px;
+		font-size: 140%;
+		font-style: normal;
+	}
+}
+
+
+
+
+
