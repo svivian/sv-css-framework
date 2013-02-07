@@ -2,18 +2,19 @@
 |	VARIABLES & FUNCTIONS
 \*-------------------------*/
 
-$base-font-size:   14;
-$font-size-milli:  12;
+$base-font-size:   14px;
+$font-size-milli:  12px;
 
-$spacing-unit:     $base-font-size +px;
-$spacing-kilo:     ($base-font-size * 1.5) +px;
-$spacing-mega:     ($base-font-size * 2) +px;
-$base-corner:      8px; /* TODO: remove +px from other styles using this */
+$spacing-unit:     $base-font-size;
+$spacing-kilo:     ($base-font-size * 1.5);
+$spacing-mega:     ($base-font-size * 2);
+$base-corner:      8px;
 
 $base-font-family: "Open Sans", "Ubuntu", "Trebuchet MS", "Helvetica", "Arial", "FreeSans", sans-serif;
 $base-font-color:  #404040;
 $link-color:       #215aa4;
 $link-hover-color: #a42121;
+$light-font-color: #888a85;
 
 $hN-font-family:   "Open Sans Condensed", "Ubuntu", "Trebuchet MS", "Helvetica", "Arial", "FreeSans", sans-serif;
 $hN-font-color:    #000;

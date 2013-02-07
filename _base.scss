@@ -5,7 +5,7 @@
 /* base font size and vertical rhythm */
 html {
 	font-family: $base-font-family;
-	font-size: $base-font-size +px;
+	font-size: $base-font-size;
 	line-height: 1.5;
 	color: $base-font-color;
 }
@@ -132,7 +132,7 @@ small {
 }
 /* often used in conjunction with <small> */
 .aside {
-	color: #888a85;
+	color: $light-font-color;
 	font-style: normal;
 	font-weight: normal;
 }
