@@ -16,7 +16,7 @@ $hf-delay-exit:   .8s !default;
 $hf-delay-side:   .1s !default;
 
 $hf-corner: $base-corner !default;
-$hf-radius: 0 0 $hf-corner +px $hf-corner +px  !default;
+$hf-radius: 0 0 $hf-corner $hf-corner  !default;
 
 /* Placeholder Selectors (for custom styling) */
 
@@ -38,11 +38,11 @@ $hf-radius: 0 0 $hf-corner +px $hf-corner +px  !default;
 	text-align: center;
 
 	&:first-child {
-		border-bottom-left-radius: $hf-corner +px;
+		border-bottom-left-radius: $hf-corner;
 	}
 	&:last-child {
 		border-right: 0;
-		border-bottom-right-radius: $hf-corner +px;
+		border-bottom-right-radius: $hf-corner;
 	}
 }
 %hf-theme-2f-ul {
@@ -121,6 +121,7 @@ $hf-radius: 0 0 $hf-corner +px $hf-corner +px  !default;
 			visibility: hidden;
 			opacity: 0;
 			position: absolute;
+			z-index: 100;
 			top: $hf-height +px;
 			left: 0;
 			width: 100%;
@@ -148,7 +149,7 @@ $hf-radius: 0 0 $hf-corner +px $hf-corner +px  !default;
 
 	.main-menu-list {
 		@include box-sizing(border-box);
-		width: 96%;
+		width: 100%;
 
 		>li {
 			@include box-sizing(border-box);

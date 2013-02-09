@@ -33,6 +33,15 @@ details, figcaption, figure, hgroup, menu {
 }
 %downward-margin-center {
 	margin: 0 auto $spacing-unit;
+	padding: 0;
+}
+%downward-margin-mega {
+	margin: 0 0 $spacing-mega;
+	padding: 0;
+}
+%downward-margin-mega-center {
+	margin: 0 auto $spacing-mega;
+	padding: 0;
 }
 
 p, ul, ol, dl, blockquote {
@@ -44,7 +53,7 @@ table {
 
 /* headings */
 h1, h2, h3, h4, h5, h6,
-.h1, .h2 {
+.h1, .h2, .h3 {
 	@extend %downward-margin;
 	font-family: $hN-font-family;
 	line-height: 1.2;
@@ -62,7 +71,7 @@ h1, .h1 {
 h2, .h2 {
 	font-size: 28px;
 }
-h3 {
+h3, .h3 {
 	font-size: 22px;
 }
 h4 {

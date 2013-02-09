@@ -44,7 +44,7 @@ $light-shadow: rgba(255, 255, 255, .2);
 /* Generic mixin for vendor properties. Usage:
 	@include vendor(box-sizing, border-box);
 */
-@mixin vendor($property, $value){
+@mixin vendor($property, $value) {
 	-webkit-#{$property}: $value;
 	   -moz-#{$property}: $value;
 		-ms-#{$property}: $value;
