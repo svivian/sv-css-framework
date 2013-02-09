@@ -1,7 +1,6 @@
 /*-------------------------*\
-|	BASE/RESET
+|	LINKS
 \*-------------------------*/
-
 
 /* Outer block for continue links:
 	<p class="nav-forward"><a href="#">Continue</a></p>
@@ -26,8 +25,11 @@
 	}
 }
 
+/*-------------------------*\
+|	IMAGES
+\*-------------------------*/
 
-/* Image helpers:
+/* Figures:
 	1. Figure block with caption
 		<div class="figure"><img src="" alt=""><br>Caption text</div>
 	2. Basic left/right floats
@@ -39,6 +41,7 @@
 	font-size: $font-size-milli;
 	text-align: center;
 }
+/* TODO: replace with figure-left/figure-right */
 .figure.left {
 	float: left;
 	margin: 0 $spacing-unit $spacing-unit 0;
@@ -48,6 +51,9 @@
 	margin: 0 0 $spacing-unit $spacing-unit;
 }
 
+/*-------------------------*\
+|	LISTS
+\*-------------------------*/
 
 /* Simple list without bullets/numbering */
 .blank-list {
@@ -57,6 +63,63 @@
 		margin: 2px 0;
 		list-style: none;
 	}
+}
+
+/* Standard definition list */
+.glossary-list {
+	>dt {
+		margin-top: $spacing-milli;
+		font-size: $font-size-kilo;
+		color: #000;
+	}
+	>dd {
+
+	}
+}
+
+/* List of links with descriptions/dates:
+	<dl class="dl-links">
+		<dt><a href="#">Link</a></dt>
+		<dd>Posted today at 12:00</dd>
+	</dl>
+ */
+.dl-links {
+	/* avoids gap on multi-line links */
+	line-height: 1.3;
+
+	>dt {
+		margin-top: $spacing-unit;
+	}
+	>dd {
+		margin: 0;
+	}
+}
+
+
+/*-------------------------*\
+|	OTHER
+\*-------------------------*/
+
+/* Key statistics - large numbers with name
+	<div class="stat-summary">
+		<div class="stat-summary-item">
+			<span class="stat-summary-count">100%</span><br>
+			Awesome
+		</div>
+	</div>
+ */
+.stat-summary {
+	@extend %downward-margin-center;
+	text-align: center;
+}
+.stat-summary-item {
+	display: inline-block;
+	margin: 0 $spacing-unit;
+	// font-size: 12px;
+}
+.stat-summary-count {
+	font-size: $font-size-mega;
+	font-weight: bold;
 }
 
 
