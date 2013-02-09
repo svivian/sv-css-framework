@@ -70,61 +70,6 @@ $spanmob: 95px;
 .span-12 { width: $spanmob*12; }
 
 
-// .colset {
-// 	width: 100%;
-// 	max-width: $grid-width-desktop;
-// 	margin: 0 auto;
-// 	padding: 0 ($grid-gutter / 2);
-
-// 	/* full-width column without need for extra elements */
-// 	&.span-full {
-// 		padding: 0 $grid-gutter;
-// 		margin-bottom: $grid-gutter;
-
-// 		>:last-child {
-// 			margin-bottom: 0;
-// 		}
-// 	}
-
-// 	&:after {
-// 		content: "";
-// 		display: table;
-// 		clear: both;
-// 	}
-// }
-
-/* bottom margin set on column for use on mobile */
-// .col {
-// 	float: left;
-// 	margin-bottom: $grid-gutter;
-// 	padding: 0 ($grid-gutter / 2);
-
-// 	&.push-center {
-// 		float: none;
-// 		margin-left: auto;
-// 		margin-right: auto;
-// 	}
-
-// 	>:last-child {
-// 		margin-bottom: 0;
-// 	}
-// }
-
-/* content pixel widths given for full size grid */
-// .span-1  { width:   8.333%; } /*   62px    75px */
-// .span-2  { width:  16.666%; } /*  144px   170px */
-// .span-3  { width:  25%;     } /*  226px   265px */
-// .span-4  { width:  33.333%; } /*  308px   360px */
-// .span-5  { width:  41.666%; } /*  390px   455px */
-// .span-6  { width:  50%;     } /*  472px   550px */
-// .span-7  { width:  58.333%; } /*  554px   645px */
-// .span-8  { width:  66.666%; } /*  636px   740px */
-// .span-9  { width:  75%;     } /*  718px   835px */
-// .span-10 { width:  83.333%; } /*  800px   930px */
-// .span-11 { width:  91.666%; } /*  882px  1025px */
-// .span-12 { width: 100%;     } /*  964px  1120px */
-
-
 /*
 	For responsive images we need to set `max-width` to keep them inside our grid, and we need auto
 	 height to maintain the aspect ratio.

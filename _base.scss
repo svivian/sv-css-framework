@@ -10,14 +10,9 @@ html {
 	color: $base-font-color;
 }
 
-body, dt, dd,
-/* TODO: remove these as/when styles are written in further down */
-pre, form, fieldset {
+body, dt, dd, pre, form, fieldset {
 	margin: 0;
 	padding: 0;
-}
-
-body {
 }
 
 /* HTML5 elements */
