@@ -145,7 +145,7 @@ $hf-radius: 0 0 $hf-corner $hf-corner  !default;
 
 
 
-@media (min-width: $grid-width-mob) and (max-width: ($grid-width-desktop - 1)) {
+@media (min-width: $breakpoint-lap-begin) and (max-width: $breakpoint-lap-end) {
 
 	.main-menu-list {
 		@include box-sizing(border-box);
@@ -158,7 +158,7 @@ $hf-radius: 0 0 $hf-corner $hf-corner  !default;
 	}
 }
 
-@media handheld, only screen and (max-width: ($grid-width-mob - 1)) {
+@media handheld, only screen and (max-width: $breakpoint-palm-end) {
 
 	.main-menu-list, .main-menu-list > li {
 		float: none;

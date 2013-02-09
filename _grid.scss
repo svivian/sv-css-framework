@@ -18,18 +18,14 @@
 </div>
 */
 
-
-/*$grid-width:         1004px;*/
-
-$grid-width-mob:      760px;
-/*$grid-width-tablet:  1000px;*/
-$grid-width-desktop: 1160px;
-$grid-gutter:          20px;
+$grid-width-lap:  760px;
+$grid-width-desk: 1160px;
+$grid-gutter:     20px;
 
 
 .grid-wrapper {
 	width: 100%;
-	max-width: $grid-width-desktop;
+	max-width: $grid-width-desk;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -40,7 +36,7 @@ $grid-gutter:          20px;
 
 .colset {
 	width: 100%;
-	max-width: $grid-width-desktop;
+	max-width: $grid-width-desk;
 	margin: 0 auto;
 	/*margin: 0 auto $grid-gutter;*/
 	padding: 0 ($grid-gutter / 2);
@@ -102,7 +98,7 @@ $grid-gutter:          20px;
 	Therefore, we avoid setting `max-width` when the browser is above the grid's max width. The
 	 exact pixel widths at full resolution are listed above.
 */
-@media (max-width: $grid-width-desktop) {
+@media (max-width: $grid-width-desk) {
 
 	img, iframe {
 		max-width: 100%;
@@ -110,10 +106,10 @@ $grid-gutter:          20px;
 	}
 }
 
-@media (min-width: $grid-width-mob) and (max-width: ($grid-width-desktop - 1)) {
+@media (min-width: $grid-width-lap) and (max-width: ($grid-width-desk - 1)) {
 
 	.grid-wrapper {
-		width: $grid-width-mob;
+		width: $grid-width-lap;
 	}
 	.colset {
 		padding: 0;
@@ -125,7 +121,7 @@ $grid-gutter:          20px;
 }
 
 /* TODO: check if `handheld` is necessary */
-@media handheld, only screen and (max-width: ($grid-width-mob - 1)) {
+@media handheld, only screen and (max-width: ($grid-width-lap - 1)) {
 
 	.colset, .grid-wrapper {
 		max-width: none;
@@ -146,6 +142,6 @@ $grid-gutter:          20px;
 
 
 /* Sample media queries (to use in other files)
-@media (min-width: $grid-width-mob) and (max-width: ($grid-width-desktop - 1)) {}
-@media handheld, only screen and (max-width: ($grid-width-mob - 1)) {}
+@media (min-width: $grid-width-lap) and (max-width: ($grid-width-desk - 1)) {}
+@media handheld, only screen and (max-width: ($grid-width-lap - 1)) {}
 */
