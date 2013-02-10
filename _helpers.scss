@@ -115,7 +115,7 @@
 .stat-summary-item {
 	display: inline-block;
 	margin: 0 $spacing-unit;
-	// font-size: 12px;
+	font-size: $font-size-milli;
 }
 .stat-summary-count {
 	font-size: $font-size-mega;
