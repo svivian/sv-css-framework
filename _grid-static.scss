@@ -18,16 +18,62 @@
 </div>
 */
 
+/* actual grid widths not including far left/right padding/borders */
+$grid-width-desk: 1120px;
+$grid-width-lap:   736px;
+$grid-gutter:       20px;
+$grid-columns:      12;
 
-$grid-width-desktop: 1140px;
-$grid-width-mob:      756px;
-$grid-gutter:          20px;
+$grid-unit-desk:  ($grid-width-desk + $grid-gutter) / $grid-columns;
+$grid-unit-lap:   ($grid-width-lap  + $grid-gutter) / $grid-columns;
+
+$grid-extra-width:      0 !default;
+$breakpoint-desk-begin: $grid-width-desk + ($grid-gutter * 2) + $grid-extra-width;
+$breakpoint-lap-end:    $breakpoint-desk-begin - 1;
+$breakpoint-lap-begin:  $grid-width-lap + ($grid-gutter * 2) + $grid-extra-width;
+$breakpoint-palm-end:   $breakpoint-lap-begin - 1;
+
+@mixin device-spans ($device:"desk") {
+
+	@if $device == "desk" {
+		.span-1,  .desk-span-1  { width: $grid-unit-desk;      } /*   95 >   75 */
+		.span-2,  .desk-span-2  { width: $grid-unit-desk *  2; } /*  190 >  170 */
+		.span-3,  .desk-span-3  { width: $grid-unit-desk *  3; } /*  285 >  265 */
+		.span-4,  .desk-span-4  { width: $grid-unit-desk *  4; } /*  380 >  360 */
+		.span-5,  .desk-span-5  { width: $grid-unit-desk *  5; } /*  475 >  455 */
+		.span-6,  .desk-span-6  { width: $grid-unit-desk *  6; } /*  570 >  550 */
+		.span-7,  .desk-span-7  { width: $grid-unit-desk *  7; } /*  665 >  645 */
+		.span-8,  .desk-span-8  { width: $grid-unit-desk *  8; } /*  760 >  740 */
+		.span-9,  .desk-span-9  { width: $grid-unit-desk *  9; } /*  855 >  835 */
+		.span-10, .desk-span-10 { width: $grid-unit-desk * 10; } /*  950 >  930 */
+		.span-11, .desk-span-11 { width: $grid-unit-desk * 11; } /* 1045 > 1025 */
+		.span-12, .desk-span-12 { width: $grid-unit-desk * 12; } /* 1140 > 1120 */
+	}
+	@if $device == "lap" {
+		.span-1,  .lap-span-1  { width: $grid-unit-lap;      } /*   63 >   43 */
+		.span-2,  .lap-span-2  { width: $grid-unit-lap *  2; } /*  126 >  106 */
+		.span-3,  .lap-span-3  { width: $grid-unit-lap *  3; } /*  189 >  169 */
+		.span-4,  .lap-span-4  { width: $grid-unit-lap *  4; } /*  252 >  232 */
+		.span-5,  .lap-span-5  { width: $grid-unit-lap *  5; } /*  315 >  295 */
+		.span-6,  .lap-span-6  { width: $grid-unit-lap *  6; } /*  348 >  328 */
+		.span-7,  .lap-span-7  { width: $grid-unit-lap *  7; } /*  441 >  421 */
+		.span-8,  .lap-span-8  { width: $grid-unit-lap *  8; } /*  504 >  484 */
+		.span-9,  .lap-span-9  { width: $grid-unit-lap *  9; } /*  567 >  547 */
+		.span-10, .lap-span-10 { width: $grid-unit-lap * 10; } /*  630 >  610 */
+		.span-11, .lap-span-11 { width: $grid-unit-lap * 11; } /*  693 >  673 */
+		.span-12, .lap-span-12 { width: $grid-unit-lap * 12; } /*  756 >  736 */
+	}
+
+}
+
 
 
 .grid-wrapper {
-	width: ($grid-width-desktop - $grid-gutter);
+	width: $grid-width-desk;
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: $grid-gutter;
+	padding-right: $grid-gutter;
 }
 
 .colset, .col {
@@ -54,42 +100,34 @@ $grid-gutter:          20px;
 	padding-left: $grid-gutter;
 }
 
-/* TODO: calculate $spanmob from above */
-$spanmob: 95px;
-.span-1  { width: $spanmob; }
-.span-2  { width: $spanmob*2; }
-.span-3  { width: $spanmob*3; }
-.span-4  { width: $spanmob*4; }
-.span-5  { width: $spanmob*5; }
-.span-6  { width: $spanmob*6; }
-.span-7  { width: $spanmob*7; }
-.span-8  { width: $spanmob*8; }
-.span-9  { width: $spanmob*9; }
-.span-10 { width: $spanmob*10; }
-.span-11 { width: $spanmob*11; }
-.span-12 { width: $spanmob*12; }
+@include device-spans ("desk");
 
 
-/*
-	For responsive images we need to set `max-width` to keep them inside our grid, and we need auto
-	 height to maintain the aspect ratio.
-	However, auto height prevents the browser being able to allocate space for the image even with
-	 their width and height explicitly defined in the HTML attributes and at full width.
-	Therefore, we avoid setting `max-width` when the browser is above the grid's max width. The
-	 exact pixel widths at full resolution are listed above.
-*/
-@media (max-width: $grid-width-desktop) {
 
+@media (min-width: $breakpoint-desk-begin) {
+}
+
+@media (max-width: $breakpoint-lap-end) {
+
+	/*
+		For responsive images we need to set `max-width` to keep them inside our grid, and we need auto
+		 height to maintain the aspect ratio.
+		However, auto height prevents the browser being able to allocate space for the image even with
+		 their width and height explicitly defined in the HTML attributes and at full width.
+		Therefore, we avoid setting `max-width` when the browser is above the grid's max width. The
+		 exact pixel widths at full resolution are listed above.
+	*/
 	img, iframe {
 		max-width: 100%;
 		height: auto; /* maintain aspect ratio */
 	}
+
 }
 
-@media (min-width: $grid-width-mob) and (max-width: ($grid-width-desktop - 1)) {
+@media (min-width: $breakpoint-lap-begin) and (max-width: $breakpoint-lap-end) {
 
 	.grid-wrapper {
-		width: ($grid-width-mob - $grid-gutter);
+		width: $grid-width-lap;
 	}
 
 	.colset {
@@ -100,29 +138,17 @@ $spanmob: 95px;
 		}
 	}
 
-	/* TODO: calculate $spanmob from above */
-	$spanmob: 63px;
-	.span-1  { width: $spanmob; }
-	.span-2  { width: $spanmob*2; }
-	.span-3  { width: $spanmob*3; }
-	.span-4  { width: $spanmob*4; }
-	.span-5  { width: $spanmob*5; }
-	.span-6  { width: $spanmob*6; }
-	.span-7  { width: $spanmob*7; }
-	.span-8  { width: $spanmob*8; }
-	.span-9  { width: $spanmob*9; }
-	.span-10 { width: $spanmob*10; }
-	.span-11 { width: $spanmob*11; }
-	.span-12 { width: $spanmob*12; }
+	@include device-spans ("lap");
 
 }
 
 /* TODO: check if `handheld` is necessary */
-@media handheld, only screen and (max-width: ($grid-width-mob - 1)) {
+@media handheld, only screen and (max-width: $breakpoint-palm-end) {
 
 	.colset, .grid-wrapper {
-		max-width: none;
+		width: auto;
 		min-width: auto;
+		max-width: none;
 	}
 	.col {
 		width: auto;
@@ -139,6 +165,6 @@ $spanmob: 95px;
 
 
 /* Sample media queries (to use in other files)
-@media (min-width: $grid-width-mob) and (max-width: ($grid-width-desktop - 1)) {}
-@media handheld, only screen and (max-width: ($grid-width-mob - 1)) {}
+@media (min-width: $breakpoint-lap-begin) and (max-width: $breakpoint-lap-end) {}
+@media handheld, only screen and (max-width: $breakpoint-palm-end) {}
 */
