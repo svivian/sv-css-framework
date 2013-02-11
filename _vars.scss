@@ -28,7 +28,7 @@ $table-pad-unit:   3px;   /* mainly top/bottom padding */
 $table-pad-kilo:   10px;  /* mainly left/right padding, top/bottom on <th> */
 $table-pad-mega:   ($table-pad-kilo * 2) + 7;  /* extra spacing for table sorting arrows (10 + arrow + 10) */
 
-$light-shadow: rgba(255, 255, 255, .2);
+$light-shadow:     rgba(255, 255, 255, .2);
 $base-corner:      8px;
 
 

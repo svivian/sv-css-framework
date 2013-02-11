@@ -131,8 +131,8 @@ q.dbl:after {
 	content: "\201d";
 }
 
-small {
-	font-size: $font-size-milli +px;
+small, .small {
+	font-size: $font-size-milli;
 }
 /* often used in conjunction with <small> */
 .aside {
@@ -184,7 +184,7 @@ textarea {
 	min-width: 250px;
 	background-color: #fff;
 	border: 1px solid #ccc;
-	font-size: $font-size-milli +px;
+	font-size: $font-size-milli;
 }
 
 textarea {
@@ -193,7 +193,7 @@ textarea {
 
 select {
 	min-width: 150px;
-	font-size: $font-size-milli +px;
+	font-size: $font-size-milli;
 }
 
 /* <input type="submit"> */
