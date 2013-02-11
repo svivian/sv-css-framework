@@ -55,17 +55,42 @@
 |	LISTS
 \*-------------------------*/
 
-/* Simple list without bullets/numbering */
-.blank-list {
+%reset-list {
 	margin-left: 0;
-
 	>li {
-		margin: 2px 0;
 		list-style: none;
 	}
 }
 
-/* Standard definition list */
+/* Simple list without bullets/numbering: <ul> */
+.blank-list {
+	@extend %reset-list;
+
+	>li {
+		margin: 2px 0;
+	}
+}
+
+/* Horizontal list: <ul> */
+.nav-list {
+	@extend %reset-list;
+	text-align: center;
+
+	>li {
+		display: inline-block;
+		padding: 0 $spacing-unit;
+		border-left: 1px solid #ddd;
+
+		&:first-child {
+			border-left: 0;
+		}
+	}
+	.title {
+		font-weight: bold;
+	}
+}
+
+/* Standard definition list: <dl> */
 .glossary-list {
 	>dt {
 		margin-top: $spacing-milli;
