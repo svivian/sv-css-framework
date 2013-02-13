@@ -71,7 +71,14 @@
 	}
 }
 
-/* Horizontal list: <ul> */
+/* Horizontal list:
+	<ul class="nav-list">
+		<li class="title">Contents</li>
+		<li><a href="#">Link One</a></li>
+		<li><a href="#">Link Two</a></li>
+		<li><a href="#">Link Three</a></li>
+	</ul>
+*/
 .nav-list {
 	@extend %reset-list;
 	text-align: center;
@@ -120,6 +127,31 @@
 	}
 }
 
+
+/*-------------------------*\
+|	INFOCARDS
+|	The media object
+\*-------------------------*/
+
+.infocard {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 $spacing-milli $spacing-kilo;
+
+	small {
+		font-size: 11px;
+	}
+}
+.infocard-img {
+	float: left;
+	vertical-align: top;
+	margin-right: 6px;
+}
+.infocard-data {
+	float: left;
+	vertical-align: top;
+	line-height: 1.2;
+}
 
 /*-------------------------*\
 |	OTHER
