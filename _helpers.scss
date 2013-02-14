@@ -137,10 +137,6 @@
 	display: inline-block;
 	vertical-align: top;
 	padding: 0 $spacing-milli $spacing-kilo;
-
-	small {
-		font-size: 11px;
-	}
 }
 .infocard-img {
 	float: left;
@@ -150,7 +146,7 @@
 .infocard-data {
 	float: left;
 	vertical-align: top;
-	line-height: 1.2;
+	line-height: 1.3;
 }
 
 /*-------------------------*\

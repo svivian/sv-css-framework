@@ -131,8 +131,11 @@ q.dbl:after {
 	content: "\201d";
 }
 
-small, .small {
+%small {
 	font-size: $font-size-milli;
+}
+small, .small {
+	@extend %small;
 }
 /* often used in conjunction with <small> */
 .aside {
