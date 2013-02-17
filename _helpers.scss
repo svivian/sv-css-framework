@@ -33,7 +33,9 @@
 	1. Figure block with caption
 		<div class="figure"><img src="" alt=""><br>Caption text</div>
 	2. Basic left/right floats
-		<img class="figure left" src="" alt="">
+		<img class="figure-left" src="" alt="">
+	3. Figure block with caption, floated
+		<div class="figure figure-right"><img src="" alt=""><br>Caption text</div>
 */
 .figure {
 	@extend %downward-margin;
@@ -41,12 +43,12 @@
 	font-size: $font-size-milli;
 	text-align: center;
 }
-/* TODO: replace with figure-left/figure-right */
-.figure.left {
+/* TODO: replace all occurrences in news */
+.figure-left {
 	float: left;
 	margin: 0 $spacing-unit $spacing-unit 0;
 }
-.figure.right {
+.figure-right {
 	float: right;
 	margin: 0 0 $spacing-unit $spacing-unit;
 }
