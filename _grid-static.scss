@@ -19,15 +19,15 @@
 */
 
 /* actual grid widths not including far left/right padding/borders */
-$grid-width-desk: 1120px;
-$grid-width-lap:   736px;
-$grid-gutter:       20px;
-$grid-columns:      12;
+$grid-width-desk:  1120px !default;
+$grid-width-lap:    736px !default;
+$grid-gutter:        20px !default;
+$grid-columns:       12   !default;
+$grid-extra-width:    0   !default;
 
 $grid-unit-desk:  ($grid-width-desk + $grid-gutter) / $grid-columns;
 $grid-unit-lap:   ($grid-width-lap  + $grid-gutter) / $grid-columns;
 
-$grid-extra-width:      0 !default;
 $breakpoint-desk-begin: $grid-width-desk + ($grid-gutter * 2) + $grid-extra-width;
 $breakpoint-lap-end:    $breakpoint-desk-begin - 1;
 $breakpoint-lap-begin:  $grid-width-lap + ($grid-gutter * 2) + $grid-extra-width;

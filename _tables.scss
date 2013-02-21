@@ -1,0 +1,191 @@
+
+$th-col-1:     #e7e7e0;
+$th-col-2:     #dbdbd2;
+$th-sel-col-1: #e7d8e6;
+$th-sel-col-2: #dbc5d9;
+
+$table-border-col:      #c4c4c4;
+$table-border-alt-col:  ($table-border-col + #121212);
+$table-border-lite-col: #ececec;
+
+// Variables denoting arrow icons for table sorting
+$tsortable-width:      7px !default;
+$tsortable-height:     9px !default;
+$tsortable-bg:         transparent url("sort-arrows.png") no-repeat 10px 10px !default;
+$tsortable-bgpos:      0 0 !default;
+$tsortable-bgpos-asc:  0 -10px !default;
+$tsortable-bgpos-desc: 0 -20px !default;
+
+
+%sorting-arrow {
+	display: block;
+	position: absolute;
+	top: 6px;
+	right: -($table-pad-kilo + $tsortable-width);
+	content: "";
+	width: $tsortable-width;
+	height: $tsortable-height;
+	background: $tsortable-bg;
+}
+
+
+/*-------------------------*\
+|	DATA TABLE
+\*-------------------------*/
+
+%grid-table-cell {
+	border-width: 1px;
+	border-color: $table-border-col $table-border-alt-col;
+}
+
+.data-table {
+
+	th, td {
+		vertical-align: middle;
+		border-width: 1px 0;
+		border-style: solid;
+		border-color: $table-border-col;
+	}
+
+	th {
+		padding: $table-pad-kilo;
+		@include linear-gradient($th-col-1, $th-col-2);
+		border-width: 1px;
+		border-color: $table-border-col $table-border-alt-col;
+		/*font-weight: bold;*/
+		text-align: left;
+		white-space: nowrap;
+	}
+
+	td {
+	}
+
+	tr:nth-child(even) > td {
+		background-color: #f9f9f7;
+	}
+	tr:nth-child(odd) > td {
+		background-color: #ffffff;
+	}
+
+	td:first-child {
+		border-left-width: 1px;
+	}
+	td:last-child {
+		border-right-width: 1px;
+	}
+
+	.cell-grid {
+		@extend %grid-table-cell;
+		text-align: center;
+	}
+
+	.sorting {
+		padding-right: $table-pad-mega;
+		cursor: pointer;
+	}
+	.sorting-asc {
+		@include linear-gradient($th-sel-col-1, $th-sel-col-2);
+	}
+	.sorting-desc {
+		@include linear-gradient($th-sel-col-1, $th-sel-col-2);
+	}
+
+}
+
+
+
+.sortwrap {
+	position: relative;
+}
+.sorting > .sortwrap:before {
+	@extend %sorting-arrow;
+	background-position: $tsortable-bgpos;
+}
+.sorting-asc > .sortwrap:before {
+	@extend %sorting-arrow;
+	background-position: $tsortable-bgpos-asc;
+}
+.sorting-desc > .sortwrap:before {
+	@extend %sorting-arrow;
+	background-position: $tsortable-bgpos-desc;
+}
+
+
+/*-------------------------*\
+|	GRID TABLE
+\*-------------------------*/
+
+.grid-table {
+
+	td {
+		@extend %grid-table-cell;
+	}
+
+}
+
+
+/*-------------------------*\
+|	KEY-VALUE TABLE
+\*-------------------------*/
+
+.vitals-table {
+
+	th, td {
+		/*padding: $table-pad-unit $table-pad-kilo;*/
+		border-width: 1px 0;
+		border-style: solid;
+		border-color: $table-border-lite-col;
+	}
+
+	th {
+		@extend .aside;
+		text-align: right;
+		text-transform: uppercase;
+	}
+
+}
+
+
+
+/* tablet */
+@media (min-width: $breakpoint-lap-begin) and (max-width: $breakpoint-lap-end) {
+
+	.data-table {
+		width: 100%;
+
+		td, th {
+			font-size: 12px;
+		}
+	}
+
+}
+
+/* mobile and tablet */
+@media (max-width: $breakpoint-lap-end) {
+
+	.data-table {
+		.sorting {
+			padding-right: $table-pad-kilo;
+		}
+	}
+
+	.sorting > .sortwrap:before {
+		background: none;
+	}
+	.sorting-asc > .sortwrap:before {
+		background: none;
+	}
+	.sorting-desc > .sortwrap:before {
+		background: none;
+	}
+
+	.cell-nano {
+		line-height: 1;
+	}
+
+}
+
+/* mobile */
+@media handheld, only screen and (max-width: $breakpoint-palm-end) {
+
+}
