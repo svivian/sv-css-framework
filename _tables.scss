@@ -123,6 +123,10 @@ $tsortable-bgpos-desc: 0 -20px !default;
 
 }
 
+.cell-grid {
+	border-width: 1px;
+}
+
 
 /*-------------------------*\
 |	KEY-VALUE TABLE
@@ -145,6 +149,16 @@ $tsortable-bgpos-desc: 0 -20px !default;
 
 }
 
+
+
+
+.cell-nano {
+	font-size: 9px;
+}
+
+.table-disabled {
+	opacity: 0.5;
+}
 
 
 /* tablet */
