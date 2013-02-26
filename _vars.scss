@@ -40,7 +40,7 @@ $base-corner:      8px;
 	box-sizing:      webkit, moz
 	linear-gradient: webkit, moz, o
 	box-shadow:      webkit
-	transition:      webkit, moz, o
+	transition:      webkit
 
 	NO PREFIXES REQUIRED:
 	border-radius
@@ -103,8 +103,6 @@ $base-corner:      8px;
 */
 @mixin transition($value...) {
 	-webkit-transition: $value;
-	   -moz-transition: $value;
-	     -o-transition: $value;
 	        transition: $value;
 }
 
