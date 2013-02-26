@@ -14,6 +14,18 @@
 	}
 }
 
+/* Outer block for links to go back:
+	<p class="nav-backward"><a href="#">go back</a></p>
+*/
+.nav-backward {
+	font-weight: bold;
+	text-align: left;
+
+	>a:before {
+		content: "\00ab  ";
+	}
+}
+
 /* Special highlighted link */
 .link-focus {
 	font-size: 115%;
