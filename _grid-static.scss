@@ -121,7 +121,7 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 
 .col {
 	float: left;
-	min-height: 100px;
+	min-height: 10px; /* forces empty grid to take up space */
 	padding-left: $grid-gutter;
 }
 
