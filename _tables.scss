@@ -16,7 +16,6 @@ $tsortable-bgpos:      0 0 !default;
 $tsortable-bgpos-asc:  0 -10px !default;
 $tsortable-bgpos-desc: 0 -20px !default;
 
-
 %sorting-arrow {
 	display: block;
 	position: absolute;
@@ -27,6 +26,7 @@ $tsortable-bgpos-desc: 0 -20px !default;
 	height: $tsortable-height;
 	background: $tsortable-bg;
 }
+
 
 
 /*-------------------------*\
@@ -92,8 +92,6 @@ $tsortable-bgpos-desc: 0 -20px !default;
 
 }
 
-
-
 .sortwrap {
 	position: relative;
 }
@@ -111,6 +109,7 @@ $tsortable-bgpos-desc: 0 -20px !default;
 }
 
 
+
 /*-------------------------*\
 |	GRID TABLE
 \*-------------------------*/
@@ -126,6 +125,7 @@ $tsortable-bgpos-desc: 0 -20px !default;
 .cell-grid {
 	border-width: 1px;
 }
+
 
 
 /*-------------------------*\
@@ -151,14 +151,14 @@ $tsortable-bgpos-desc: 0 -20px !default;
 
 
 
+/*-------------------------*\
+|	MISC
+\*-------------------------*/
 
 .cell-nano {
 	font-size: 9px;
 }
 
-.table-disabled {
-	opacity: 0.5;
-}
 
 
 /* tablet */
