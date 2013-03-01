@@ -52,7 +52,6 @@ $tsortable-bgpos-desc: 0 -20px !default;
 		@include linear-gradient($th-col-1, $th-col-2);
 		border-width: 1px;
 		border-color: $table-border-col $table-border-alt-col;
-		/*font-weight: bold;*/
 		text-align: left;
 		white-space: nowrap;
 	}
@@ -135,13 +134,13 @@ $tsortable-bgpos-desc: 0 -20px !default;
 .vitals-table {
 
 	th, td {
-		/*padding: $table-pad-unit $table-pad-kilo;*/
 		border-width: 1px 0;
 		border-style: solid;
 		border-color: $table-border-lite-col;
 	}
 
 	th {
+		@extend %small;
 		@extend .aside;
 		text-align: right;
 		text-transform: uppercase;
