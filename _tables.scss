@@ -180,19 +180,22 @@ $tsortable-bgpos-desc: 0 -20px !default;
 @media (max-width: $breakpoint-lap-end) {
 
 	.data-table {
+		td, th {
+			font-size: 12px;
+		}
 		.sorting {
 			padding-right: $table-pad-kilo;
 		}
 	}
 
-	.sorting > .sortwrap:before {
-		background: none;
-	}
-	.sorting-asc > .sortwrap:before {
-		background: none;
-	}
-	.sorting-desc > .sortwrap:before {
-		background: none;
+	.sorting > .sortwrap,
+	.sorting-asc > .sortwrap,
+	.sorting-desc > .sortwrap {
+		text-decoration: underline;
+
+		&:before {
+			background: none;
+		}
 	}
 
 	.cell-nano {
