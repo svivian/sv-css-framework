@@ -1,8 +1,10 @@
 
-$th-col-1:     #e7e7e0;
-$th-col-2:     #dbdbd2;
-$th-sel-col-1: #e7d8e6;
-$th-sel-col-2: #dbc5d9;
+$th-col-1:      #e7e7e0;
+$th-col-2:      #dbdbd2;
+$th-sel-col-1:  #e7d8e6;
+$th-sel-col-2:  #dbc5d9;
+$zebra-bg-odd:  #ffffff;
+$zebra-bg-even: #f4f4f2;
 
 $table-border-col:      #c4c4c4;
 $table-border-alt-col:  ($table-border-col + #121212);
@@ -59,11 +61,11 @@ $tsortable-bgpos-desc: 0 -20px !default;
 	td {
 	}
 
-	tr:nth-child(even) > td {
-		background-color: #f9f9f7;
-	}
 	tr:nth-child(odd) > td {
-		background-color: #ffffff;
+		background-color: $zebra-bg-odd;
+	}
+	tr:nth-child(even) > td {
+		background-color: $zebra-bg-even;
 	}
 
 	td:first-child {
