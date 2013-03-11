@@ -26,6 +26,11 @@ $hf-radius: 0 0 $hf-corner $hf-corner  !default;
 	border: 1px solid #000;
 	border-top: 0;
 	border-radius: $hf-radius;
+
+	a {
+		color: #eee;
+		text-decoration: none;
+	}
 }
 %hf-theme-1f-li {
 	/* ul>li */
@@ -71,7 +76,6 @@ $hf-radius: 0 0 $hf-corner $hf-corner  !default;
 }
 
 
-/* TODO: rename to `hyperfish-list` and extract submenu to class instead of nested */
 .main-menu-list {
 	width: $hf-width +px;
 	height: $hf-height +px;
