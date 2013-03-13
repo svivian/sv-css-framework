@@ -156,6 +156,11 @@ del {
 	text-decoration: line-through;
 }
 
+pre, code, samp, kbd {
+	font-family: $mono-font-family;
+	font-size: 100%;
+}
+
 hr {
 	height: 1px;
 	margin: $spacing-unit auto;
