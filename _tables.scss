@@ -157,7 +157,7 @@ $tsortable-bgpos-desc: 0 -20px !default;
 \*-------------------------*/
 
 .cell-nano {
-	font-size: 9px;
+	font-size: $font-size-micro;
 }
 
 .wide-table {
@@ -169,10 +169,8 @@ $tsortable-bgpos-desc: 0 -20px !default;
 @media (min-width: $breakpoint-lap-begin) and (max-width: $breakpoint-lap-end) {
 
 	.data-table {
-		width: 100%;
-
 		td, th {
-			font-size: 12px;
+			font-size: $font-size-milli;
 		}
 	}
 
@@ -183,7 +181,7 @@ $tsortable-bgpos-desc: 0 -20px !default;
 
 	.data-table {
 		td, th {
-			font-size: 12px;
+			font-size: $font-size-milli;
 		}
 		.sorting {
 			padding-right: $table-pad-kilo;
