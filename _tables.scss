@@ -159,6 +159,9 @@ $tsortable-bgpos-desc: 0 -20px !default;
 .cell-nano {
 	font-size: $font-size-micro;
 }
+.cell-fixed {
+	white-space: nowrap;
+}
 
 .wide-table {
 	width: 100%;
