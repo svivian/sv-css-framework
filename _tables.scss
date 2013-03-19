@@ -134,6 +134,7 @@ $tsortable-bgpos-desc: 0 -20px !default;
 \*-------------------------*/
 
 .vitals-table {
+	width: 100%;
 
 	th, td {
 		border-width: 1px 0;
@@ -144,10 +145,16 @@ $tsortable-bgpos-desc: 0 -20px !default;
 	th {
 		@extend %small;
 		@extend .aside;
+		width: 1px;
+		white-space: nowrap;
 		text-align: right;
+	}
+}
+
+.key-table {
+	th {
 		text-transform: uppercase;
 	}
-
 }
 
 
