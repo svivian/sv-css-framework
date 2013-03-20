@@ -10,7 +10,7 @@
 	text-align: right;
 
 	>a:after {
-		content: "  \00bb";
+		content: "\00a0\00bb";
 	}
 }
 
@@ -22,7 +22,7 @@
 	text-align: left;
 
 	>a:before {
-		content: "\00ab  ";
+		content: "\00ab\00a0";
 	}
 }
 
@@ -33,7 +33,7 @@
 	margin-left: $spacing-kilo;
 
 	&:before {
-		content: "\00bb  ";
+		content: "\00bb\00a0";
 	}
 }
 
