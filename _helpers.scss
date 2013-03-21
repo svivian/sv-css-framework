@@ -149,7 +149,8 @@
 
 %infocard-base {
 	display: inline-block;
-	padding: 0 $spacing-milli $spacing-kilo;
+	margin-bottom: $spacing-milli;
+	padding: 0 $spacing-milli $spacing-unit;
 }
 .infocard {
 	@extend %infocard-base;
