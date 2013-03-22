@@ -1,0 +1,55 @@
+/*-------------------------*\
+|	MODAL DIALOGS
+\*-------------------------*/
+
+.modal {
+	/* layout */
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	z-index: 200;
+	/* default size */
+	width: 300px;
+	height: 360px;
+	margin-top: -180px;
+	margin-left: -150px;
+	padding: 10px;
+	/* chrome */
+	border: 12px solid #666;
+	border: 12px solid rgba(0, 0, 0, 0.5);
+	border-radius: 24px;
+	background-color: #fff;
+	background-clip: padding-box;
+}
+.modal .wrapper {
+	height: 100%;
+	padding: 0 8px;
+	background-color: #fff;
+	overflow: hidden;
+}
+.modal .modal-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 16px;
+	height: 16px;
+	background-position: -48px 0;
+	cursor: pointer;
+}
+.modal h2 {
+	/*margin: 8px 0 0;*/
+	text-align: center;
+}
+.modal .vitals {
+	width: 100%;
+}
+
+.whiteout {
+	display: none;
+	position: fixed;
+	left: 0; top: 0; right: 0; bottom: 0;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.8);
+}
