@@ -235,6 +235,17 @@
 }
 
 
-
-
-
+/* Fractions - simple styling for custom fractions:
+	<span class="fraction"><sup>1</sup>&frasl;<sub>8</sub></span>
+*/
+$frac-size: .66em;
+.fraction {
+	>sup {
+		font-size: $frac-size;
+		vertical-align: .4em;
+	}
+	>sub {
+		font-size: $frac-size;
+		vertical-align: -.2em;
+	}
+}
