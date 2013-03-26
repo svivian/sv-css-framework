@@ -129,6 +129,11 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 
 @include device-spans ("desk");
 
+.push-center {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 
 @media (max-width: $breakpoint-lap-end) {
