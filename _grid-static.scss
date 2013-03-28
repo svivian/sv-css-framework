@@ -195,6 +195,10 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 
 
 /* Sample media queries (to use in other files)
-@media (min-width: $breakpoint-lap-begin) and (max-width: $breakpoint-lap-end) {}
-@media handheld, only screen and (max-width: $breakpoint-palm-end) {}
+Mobile & Tablet:
+	@media (max-width: $breakpoint-lap-end) {}
+Tablet:
+	@media (min-width: $breakpoint-lap-begin) and (max-width: $breakpoint-lap-end) {}
+Mobile:
+	@media handheld, only screen and (max-width: $breakpoint-palm-end) {}
 */
