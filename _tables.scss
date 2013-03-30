@@ -68,6 +68,17 @@ $tsortable-bgpos-desc: 0 -20px !default;
 		background-color: $zebra-bg-even;
 	}
 
+	/* for filtering (odd/even classes must be separate from nth-child) */
+	tr.odd > td {
+		background-color: $zebra-bg-odd;
+	}
+	tr.even > td {
+		background-color: $zebra-bg-even;
+	}
+	tr.hidden {
+		display: none;
+	}
+
 	td:first-child {
 		border-left-width: 1px;
 	}
