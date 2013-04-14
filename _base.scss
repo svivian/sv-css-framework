@@ -173,7 +173,8 @@ hr {
 	clear: both;
 }
 
-/* form fields */
+
+/* forms base */
 
 input, button, select, textarea {
 	font: inherit;
@@ -206,7 +207,7 @@ select {
 
 /* <input type="submit"> */
 .btn {
-    display: inline-block;
-    cursor: pointer;
+	display: inline-block;
+	cursor: pointer;
 	padding: 5px 10px;
 }
