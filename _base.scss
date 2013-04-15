@@ -177,9 +177,10 @@ hr {
 /* forms base */
 
 input, button, select, textarea {
-	font: inherit;
 	margin: 0;
 	padding: 4px;
+	font: inherit;
+	color: inherit;
 }
 
 /* Any input tag that allows text, e.g.
@@ -210,4 +211,5 @@ select {
 	display: inline-block;
 	cursor: pointer;
 	padding: 5px 10px;
+	text-align: center;
 }

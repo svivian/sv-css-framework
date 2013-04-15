@@ -34,6 +34,7 @@ $table-pad-kilo:   10px;  /* mainly left/right padding, top/bottom on <th> */
 $table-pad-mega:   ($table-pad-kilo * 2) + 7;  /* extra spacing for table sorting arrows (10 + arrow + 10) */
 
 $light-shadow:     rgba(255, 255, 255, .2);
+$dark-shadow:      rgba(  0,   0,   0, .4);
 $base-corner:      8px;
 
 
@@ -86,7 +87,7 @@ $base-corner:      8px;
 /* Mixin for box shadow. Usage:
 	@include box-shadow(0 0 10px #000);
 */
-@mixin box-shadow($value) {
+@mixin box-shadow($value...) {
 	-webkit-box-shadow: $value;
 	        box-shadow: $value;
 }

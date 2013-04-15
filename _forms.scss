@@ -2,29 +2,146 @@
 |	FORMS
 \*-------------------------*/
 
+/* basic form field reset is in _base.scss
+	input
+	.input-text
+	textarea
+	button
+	select
+	.btn
+*/
 
 
 
-input, select, textarea {
-	font-size: 13px;
-}
-input[type="text"],
-input[type="password"] {
-	padding: 2px;
-	border: 1px solid #d3d7cf;
-	background-color: #ffffff;
-	color: #555753;
+
+/*-------------------------*\
+|	BUTTONS
+\*-------------------------*/
+
+$btn-def-color-1: #fafafa;
+$btn-def-color-2: #e6e6e6;
+$btn-def-bdcolor: #cccccc;
+$btn-darken: #090909;
+
+$btn-primary-color-1: #0088cc;
+$btn-primary-color-2: #0044cc;
+$btn-primary-bdcolor: $btn-primary-color-2 - $btn-darken;
+$btn-info-color-1:    #5bc0de;
+$btn-info-color-2:    #2f96b4;
+$btn-info-bdcolor:    $btn-info-color-2 - $btn-darken;
+$btn-success-color-1: #62c462;
+$btn-success-color-2: #51a351;
+$btn-success-bdcolor: $btn-success-color-2 - $btn-darken;
+$btn-warning-color-1: #fbb450;
+$btn-warning-color-2: #f89406;
+$btn-warning-bdcolor: $btn-warning-color-2 - $btn-darken;
+$btn-danger-color-1:  #ee5f5b;
+$btn-danger-color-2:  #bd362f;
+$btn-danger-bdcolor:  $btn-danger-color-2 - $btn-darken;
+$btn-inverse-color-1: #484848;
+$btn-inverse-color-2: #303030;
+$btn-inverse-bdcolor: $btn-inverse-color-2 - $btn-darken;
+
+
+.btn {
+	margin: 0 2px;
+	background-color: #e6e6e6;
+	@include linear-gradient($btn-def-color-1, $btn-def-color-2);
+	@include box-shadow(inset 1px 1px 0 $light-shadow);
+	border: 1px solid $btn-def-bdcolor;
 	border-radius: 4px;
+	vertical-align: middle;
+	line-height: 1;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .6);
+
+	&:hover, &:focus {
+		@include linear-gradient($btn-def-color-1 - $btn-darken, $btn-def-color-2 - $btn-darken);
+		// @include transition(background-image 1s ease);
+	}
+
+	&:active {
+		@include box-shadow(inset 0 2px 4px rgba(0, 0, 0, 0.15));
+	}
+
+	&[disabled] {
+		cursor: default;
+		background-image: none;
+		@include box-shadow(none);
+		border-color: $btn-def-bdcolor;
+		text-shadow: none;
+		opacity: .6;
+	}
 }
-input[type="submit"] {
-	padding: 1px 4px;
+
+
+%btn-alternate {
+	color: #fff;
+	text-shadow: 1px 1px 1px $dark-shadow;
+
+	&[disabled] {
+		color: inherit;
+		&:hover, &:focus {
+			background-image: none;
+		}
+	}
 }
 
+.btn-primary {
+	@include linear-gradient($btn-primary-color-1, $btn-primary-color-2);
+	border-color: $btn-primary-bdcolor;
+	@extend %btn-alternate;
 
+	&:hover, &:focus {
+		@include linear-gradient($btn-primary-color-1 - $btn-darken, $btn-primary-color-2 - $btn-darken);
+	}
+}
 
-input[type="text"],
-textarea {
-	width: 642px;
-	border: 1px solid #ccc;
-	border-radius: 0;
+.btn-info {
+	@include linear-gradient($btn-info-color-1, $btn-info-color-2);
+	border-color: $btn-info-bdcolor;
+	@extend %btn-alternate;
+
+	&:hover, &:focus {
+		@include linear-gradient($btn-info-color-1 - $btn-darken, $btn-info-color-2 - $btn-darken);
+	}
+}
+
+.btn-success {
+	@include linear-gradient($btn-success-color-1, $btn-success-color-2);
+	border-color: $btn-success-bdcolor;
+	@extend %btn-alternate;
+
+	&:hover, &:focus {
+		@include linear-gradient($btn-success-color-1 - $btn-darken, $btn-success-color-2 - $btn-darken);
+	}
+}
+
+.btn-warning {
+	@include linear-gradient($btn-warning-color-1, $btn-warning-color-2);
+	border-color: $btn-warning-bdcolor;
+	@extend %btn-alternate;
+
+	&:hover, &:focus {
+		@include linear-gradient($btn-warning-color-1 - $btn-darken, $btn-warning-color-2 - $btn-darken);
+	}
+}
+
+.btn-danger {
+	@include linear-gradient($btn-danger-color-1, $btn-danger-color-2);
+	border-color: $btn-danger-bdcolor;
+	@extend %btn-alternate;
+
+	&:hover, &:focus {
+		@include linear-gradient($btn-danger-color-1 - $btn-darken, $btn-danger-color-2 - $btn-darken);
+	}
+}
+
+.btn-inverse {
+	@include linear-gradient($btn-inverse-color-1, $btn-inverse-color-2);
+	border-color: $btn-inverse-bdcolor;
+	@extend %btn-alternate;
+
+	&:hover, &:focus {
+		@include linear-gradient($btn-inverse-color-1 - $btn-darken, $btn-inverse-color-2 - $btn-darken);
+	}
 }
