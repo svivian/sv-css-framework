@@ -56,11 +56,10 @@ $btn-inverse-bdcolor: $btn-inverse-color-2 - $btn-darken;
 
 	&:hover, &:focus {
 		@include linear-gradient($btn-def-color-1 - $btn-darken, $btn-def-color-2 - $btn-darken);
-		// @include transition(background-image 1s ease);
 	}
 
 	&:active {
-		@include box-shadow(inset 0 2px 4px rgba(0, 0, 0, 0.15));
+		@include box-shadow(inset 0 1px 4px rgba(0, 0, 0, 0.15));
 	}
 
 	&[disabled] {
@@ -74,6 +73,13 @@ $btn-inverse-bdcolor: $btn-inverse-color-2 - $btn-darken;
 }
 
 
+$use-btn-primary: false;
+$use-btn-info:    false;
+$use-btn-success: false;
+$use-btn-warning: false;
+$use-btn-danger:  false;
+$use-btn-inverse: false;
+
 %btn-alternate {
 	color: #fff;
 	text-shadow: 1px 1px 1px $dark-shadow;
@@ -86,62 +92,75 @@ $btn-inverse-bdcolor: $btn-inverse-color-2 - $btn-darken;
 	}
 }
 
-.btn-primary {
-	@include linear-gradient($btn-primary-color-1, $btn-primary-color-2);
-	border-color: $btn-primary-bdcolor;
-	@extend %btn-alternate;
 
-	&:hover, &:focus {
-		@include linear-gradient($btn-primary-color-1 - $btn-darken, $btn-primary-color-2 - $btn-darken);
+@if $use-btn-primary {
+	.btn-primary {
+		@include linear-gradient($btn-primary-color-1, $btn-primary-color-2);
+		border-color: $btn-primary-bdcolor;
+		@extend %btn-alternate;
+
+		&:hover, &:focus {
+			@include linear-gradient($btn-primary-color-1 - $btn-darken, $btn-primary-color-2 - $btn-darken);
+		}
 	}
 }
 
-.btn-info {
-	@include linear-gradient($btn-info-color-1, $btn-info-color-2);
-	border-color: $btn-info-bdcolor;
-	@extend %btn-alternate;
+@if $use-btn-info {
+	.btn-info {
+		@include linear-gradient($btn-info-color-1, $btn-info-color-2);
+		border-color: $btn-info-bdcolor;
+		@extend %btn-alternate;
 
-	&:hover, &:focus {
-		@include linear-gradient($btn-info-color-1 - $btn-darken, $btn-info-color-2 - $btn-darken);
+		&:hover, &:focus {
+			@include linear-gradient($btn-info-color-1 - $btn-darken, $btn-info-color-2 - $btn-darken);
+		}
 	}
 }
 
-.btn-success {
-	@include linear-gradient($btn-success-color-1, $btn-success-color-2);
-	border-color: $btn-success-bdcolor;
-	@extend %btn-alternate;
+@if $use-btn-success {
+	.btn-success {
+		@include linear-gradient($btn-success-color-1, $btn-success-color-2);
+		border-color: $btn-success-bdcolor;
+		@extend %btn-alternate;
 
-	&:hover, &:focus {
-		@include linear-gradient($btn-success-color-1 - $btn-darken, $btn-success-color-2 - $btn-darken);
+		&:hover, &:focus {
+			@include linear-gradient($btn-success-color-1 - $btn-darken, $btn-success-color-2 - $btn-darken);
+		}
 	}
 }
 
-.btn-warning {
-	@include linear-gradient($btn-warning-color-1, $btn-warning-color-2);
-	border-color: $btn-warning-bdcolor;
-	@extend %btn-alternate;
+@if $use-btn-warning {
+	.btn-warning {
+		@include linear-gradient($btn-warning-color-1, $btn-warning-color-2);
+		border-color: $btn-warning-bdcolor;
+		@extend %btn-alternate;
 
-	&:hover, &:focus {
-		@include linear-gradient($btn-warning-color-1 - $btn-darken, $btn-warning-color-2 - $btn-darken);
+		&:hover, &:focus {
+			@include linear-gradient($btn-warning-color-1 - $btn-darken, $btn-warning-color-2 - $btn-darken);
+		}
 	}
 }
 
-.btn-danger {
-	@include linear-gradient($btn-danger-color-1, $btn-danger-color-2);
-	border-color: $btn-danger-bdcolor;
-	@extend %btn-alternate;
+@if $use-btn-danger {
+	.btn-danger {
+		@include linear-gradient($btn-danger-color-1, $btn-danger-color-2);
+		border-color: $btn-danger-bdcolor;
+		@extend %btn-alternate;
 
-	&:hover, &:focus {
-		@include linear-gradient($btn-danger-color-1 - $btn-darken, $btn-danger-color-2 - $btn-darken);
+		&:hover, &:focus {
+			@include linear-gradient($btn-danger-color-1 - $btn-darken, $btn-danger-color-2 - $btn-darken);
+		}
 	}
 }
 
-.btn-inverse {
-	@include linear-gradient($btn-inverse-color-1, $btn-inverse-color-2);
-	border-color: $btn-inverse-bdcolor;
-	@extend %btn-alternate;
+@if $use-btn-inverse {
+	.btn-inverse {
+		@include linear-gradient($btn-inverse-color-1, $btn-inverse-color-2);
+		border-color: $btn-inverse-bdcolor;
+		@extend %btn-alternate;
 
-	&:hover, &:focus {
-		@include linear-gradient($btn-inverse-color-1 - $btn-darken, $btn-inverse-color-2 - $btn-darken);
+		&:hover, &:focus {
+			@include linear-gradient($btn-inverse-color-1 - $btn-darken, $btn-inverse-color-2 - $btn-darken);
+		}
 	}
 }
