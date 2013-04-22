@@ -157,14 +157,24 @@
 	vertical-align: top;
 }
 .infocard-img {
-	float: left;
-	vertical-align: top;
+	display: inline-block;
+	vertical-align: middle;
 	margin-right: 6px;
 }
 .infocard-data {
-	float: left;
-	vertical-align: top;
+	display: inline-block;
+	vertical-align: middle;
 	line-height: 1.3;
+}
+
+.infocard-list {
+	@extend %downward-margin-center;
+}
+.infocard-list-compact {
+	@extend %downward-margin-center;
+	>.infocard {
+		padding: 0 $spacing-milli;
+	}
 }
 
 
