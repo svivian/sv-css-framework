@@ -107,7 +107,7 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 }
 
 .colset {
-	margin-left: (-$grid-gutter);
+	margin-left:  -$grid-gutter;
 	margin-bottom: $grid-gutter;
 
 	&:last-child {
