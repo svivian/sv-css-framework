@@ -24,13 +24,14 @@ $grid-width-lap:    736px !default;
 $grid-gutter:        20px !default;
 $grid-columns:       12   !default;
 $grid-extra-width:    0   !default;
+$scrollbar-width:      17px;
 
 $grid-unit-desk:  ($grid-width-desk + $grid-gutter) / $grid-columns;
 $grid-unit-lap:   ($grid-width-lap  + $grid-gutter) / $grid-columns;
 
-$breakpoint-desk-begin: $grid-width-desk + ($grid-gutter * 2) + $grid-extra-width;
+$breakpoint-desk-begin: $grid-width-desk + ($grid-gutter * 2) + $grid-extra-width + $scrollbar-width;
 $breakpoint-lap-end:    $breakpoint-desk-begin - 1;
-$breakpoint-lap-begin:  $grid-width-lap + ($grid-gutter * 2) + $grid-extra-width;
+$breakpoint-lap-begin:  $grid-width-lap + ($grid-gutter * 2) + $grid-extra-width + $scrollbar-width;
 $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 
 @mixin device-spans ($device:"desk") {
