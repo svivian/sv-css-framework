@@ -35,18 +35,13 @@ $tsortable-bgpos-desc: 0 -20px !default;
 |	DATA TABLE
 \*-------------------------*/
 
-%grid-table-cell {
-	border-width: 1px;
-	border-color: $table-border-col $table-border-alt-col;
-}
-
 .data-table {
 
 	th, td {
 		vertical-align: middle;
 		border-width: 1px 0;
 		border-style: solid;
-		border-color: $table-border-col;
+		border-color: $table-border-col $table-border-alt-col;
 	}
 
 	th {
@@ -54,7 +49,6 @@ $tsortable-bgpos-desc: 0 -20px !default;
 		background-color: $th-col-1;
 		@include linear-gradient($th-col-1, $th-col-2);
 		border-width: 1px;
-		border-color: $table-border-col $table-border-alt-col;
 		text-align: left;
 		white-space: nowrap;
 	}
@@ -88,7 +82,7 @@ $tsortable-bgpos-desc: 0 -20px !default;
 	}
 
 	.cell-grid {
-		@extend %grid-table-cell;
+		border-width: 1px;
 		text-align: center;
 	}
 
@@ -128,15 +122,10 @@ $tsortable-bgpos-desc: 0 -20px !default;
 \*-------------------------*/
 
 .grid-table {
-
 	td {
-		@extend %grid-table-cell;
+		border-width: 1px;
+		text-align: center;
 	}
-
-}
-
-.cell-grid {
-	border-width: 1px;
 }
 
 
