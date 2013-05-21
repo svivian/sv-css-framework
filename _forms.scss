@@ -42,6 +42,10 @@ $btn-inverse-color-1: #484848;
 $btn-inverse-color-2: #303030;
 $btn-inverse-bdcolor: $btn-inverse-color-2 - $btn-darken;
 
+.btn-list {
+	@extend %downward-margin-center;
+	text-align: center;
+}
 
 .btn {
 	margin: 0 2px;
