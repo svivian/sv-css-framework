@@ -2,14 +2,14 @@
 |	VARIABLES & FUNCTIONS
 \*-------------------------*/
 
-$base-font-size:   14px !default;
+$base-font-size:   15px !default;
 $spacing-unit:     $base-font-size;
 
-$font-size-micro:   9px !default;
-$font-size-milli:  12px !default;
-$font-size-kilo:   16px !default;
-$font-size-mega:   22px !default;
-$font-size-giga:   28px !default;
+$font-size-micro:  10px !default;
+$font-size-milli:  13px !default;
+$font-size-kilo:   17px !default;
+$font-size-mega:   24px !default;
+$font-size-giga:   30px !default;
 $font-size-tera:   36px !default;
 
 $spacing-milli:    ($base-font-size * 0.5);	/* 7 */
@@ -18,13 +18,13 @@ $spacing-mega:     ($base-font-size * 2);	/* 28 */
 $spacing-giga:     ($base-font-size * 2.5);	/* 35 */
 $spacing-tera:     ($base-font-size * 4);	/* 56 */
 
-$base-font-family: "Open Sans", "Ubuntu", "Trebuchet MS", "Helvetica", "Arial", "FreeSans", sans-serif !default;
+$base-font-family: "Ubuntu", "Trebuchet MS", "Helvetica", "Arial", "FreeSans", sans-serif !default;
 $base-font-color:  #404040 !default;
 $link-color:       #215aa4 !default;
 $link-hover-color: #a42121 !default;
 $light-font-color: #777 !default;
 
-$hN-font-family:   "Open Sans Condensed", "Ubuntu", "Trebuchet MS", "Helvetica", "Arial", "FreeSans", sans-serif !default;
+$hN-font-family:   "Ubuntu", "Trebuchet MS", "Helvetica", "Arial", "FreeSans", sans-serif !default;
 $hN-font-color:    #000 !default;
 
 $mono-font-family: "Consolas", "Ubuntu Mono", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", monospace !default;
