@@ -21,24 +21,6 @@ details, figcaption, figure, hgroup, menu {
 	display: block;
 }
 
-/* downward margins */
-%downward-margin {
-	margin: 0 0 $spacing-unit;
-	padding: 0;
-}
-%downward-margin-center {
-	margin: 0 auto $spacing-unit;
-	padding: 0;
-}
-%downward-margin-mega {
-	margin: 0 0 $spacing-mega;
-	padding: 0;
-}
-%downward-margin-mega-center {
-	margin: 0 auto $spacing-mega;
-	padding: 0;
-}
-
 p, ul, ol, dl, blockquote {
 	@extend %downward-margin;
 }
@@ -127,9 +109,6 @@ q.dbl:after {
 	content: "\201d";
 }
 
-%small {
-	font-size: $font-size-milli;
-}
 small, .small {
 	@extend %small;
 }

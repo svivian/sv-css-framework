@@ -1,5 +1,5 @@
 /*-------------------------*\
-|	VARIABLES & FUNCTIONS
+|	VARIABLES
 \*-------------------------*/
 
 $base-font-size:   15px !default;
@@ -37,6 +37,10 @@ $light-shadow:     rgba(255, 255, 255, .2) !default;
 $dark-shadow:      rgba(  0,   0,   0, .4) !default;
 $base-corner:      8px !default;
 
+
+/*-------------------------*\
+|	MIXINS
+\*-------------------------*/
 
 /*
 	REQUIRED CSS PREFIXES:
@@ -109,4 +113,33 @@ $base-corner:      8px !default;
 	        transition: $value;
 }
 
+
+/*-------------------------*\
+|	PLACEHOLDERS
+|	Styles to be extended
+\*-------------------------*/
+
+
+/* downward margins */
+%downward-margin {
+	margin: 0 0 $spacing-unit;
+	padding: 0;
+}
+%downward-margin-center {
+	margin: 0 auto $spacing-unit;
+	padding: 0;
+}
+%downward-margin-mega {
+	margin: 0 0 $spacing-mega;
+	padding: 0;
+}
+%downward-margin-mega-center {
+	margin: 0 auto $spacing-mega;
+	padding: 0;
+}
+
+
+%small {
+	font-size: $font-size-milli;
+}
 
