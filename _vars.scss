@@ -12,11 +12,11 @@ $font-size-mega:   24px !default;
 $font-size-giga:   30px !default;
 $font-size-tera:   36px !default;
 
-$spacing-milli:    ($base-font-size * 0.5);	/* 7 */
-$spacing-kilo:     ($base-font-size * 1.5);	/* 21 */
-$spacing-mega:     ($base-font-size * 2);	/* 28 */
-$spacing-giga:     ($base-font-size * 2.5);	/* 35 */
-$spacing-tera:     ($base-font-size * 4);	/* 56 */
+$spacing-milli:    round($base-font-size * 0.5);  /*  8 */
+$spacing-kilo:     round($base-font-size * 1.5);  /* 23 */
+$spacing-mega:     round($base-font-size * 2);    /* 30 */
+$spacing-giga:     round($base-font-size * 2.5);  /* 38 */
+$spacing-tera:     round($base-font-size * 4);    /* 60 */
 
 $base-font-family: "Ubuntu", "Trebuchet MS", "Helvetica", "Arial", "FreeSans", sans-serif !default;
 $base-font-color:  #404040 !default;
