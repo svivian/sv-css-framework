@@ -29,8 +29,8 @@ $hN-font-color:     #000 !default;
 
 $mono-font-family:  "Consolas", "Ubuntu Mono", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", monospace !default;
 
-$base-border-color: #ccc;
-$base-border:       1px solid $base-border-color;
+$base-border-color: #ccc !default;
+$base-border:       1px solid $base-border-color !default;
 
 $table-pad-unit:    3px !default;   /* mainly top/bottom padding */
 $table-pad-kilo:    10px !default;  /* mainly left/right padding, top/bottom on <th> */
