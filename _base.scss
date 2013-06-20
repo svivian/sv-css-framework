@@ -163,17 +163,16 @@ input, button, select, textarea {
 }
 
 /* Any input tag that allows text, e.g.
-	<input type="text">
-	<input type="password">
-	<input type="email">
+	<input class="input-text" type="text">
+	<input class="input-text" type="password">
+	<input class="input-text" type="email">
+	<textarea></textarea>
 */
 .input-text,
 textarea {
+	@extend %form-input-base;
 	/* default browser widths are too small */
 	min-width: 250px;
-	background-color: #fff;
-	border: $base-border;
-	font-size: $font-size-milli;
 }
 
 textarea {

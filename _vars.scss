@@ -141,8 +141,12 @@ $base-corner:       8px !default;
 	padding: 0;
 }
 
-
 %small {
 	font-size: $font-size-milli;
 }
 
+%form-input-base {
+	background-color: #fff;
+	border: $base-border;
+	font-size: $font-size-milli;
+}
