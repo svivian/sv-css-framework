@@ -11,6 +11,10 @@
 	.btn
 */
 
+.input-number {
+	@extend %input-text-base;
+	min-width: 50px;
+}
 
 
 

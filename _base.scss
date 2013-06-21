@@ -170,7 +170,7 @@ input, button, select, textarea {
 */
 .input-text,
 textarea {
-	@extend %form-input-base;
+	@extend %input-text-base;
 	/* default browser widths are too small */
 	min-width: 250px;
 }
