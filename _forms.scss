@@ -45,29 +45,37 @@
 |	BUTTONS
 \*-------------------------*/
 
-$btn-def-color-1: #fafafa;
-$btn-def-color-2: #e6e6e6;
-$btn-def-bdcolor: #cccccc;
-$btn-darken: #090909;
+$btn-def-color-1:     #fafafa !default;
+$btn-def-color-2:     #e6e6e6 !default;
+$btn-def-bdcolor:     #cccccc !default;
+$btn-darken:          #090909 !default;
 
-$btn-primary-color-1: #0088cc;
-$btn-primary-color-2: #0044cc;
+$btn-primary-color-1: #0088cc !default;
+$btn-primary-color-2: #0044cc !default;
 $btn-primary-bdcolor: $btn-primary-color-2 - $btn-darken;
-$btn-info-color-1:    #5bc0de;
-$btn-info-color-2:    #2f96b4;
+$btn-info-color-1:    #5bc0de !default;
+$btn-info-color-2:    #2f96b4 !default;
 $btn-info-bdcolor:    $btn-info-color-2 - $btn-darken;
-$btn-success-color-1: #62c462;
-$btn-success-color-2: #51a351;
+$btn-success-color-1: #62c462 !default;
+$btn-success-color-2: #51a351 !default;
 $btn-success-bdcolor: $btn-success-color-2 - $btn-darken;
-$btn-warning-color-1: #fbb450;
-$btn-warning-color-2: #f89406;
+$btn-warning-color-1: #fbb450 !default;
+$btn-warning-color-2: #f89406 !default;
 $btn-warning-bdcolor: $btn-warning-color-2 - $btn-darken;
-$btn-danger-color-1:  #ee5f5b;
-$btn-danger-color-2:  #bd362f;
+$btn-danger-color-1:  #ee5f5b !default;
+$btn-danger-color-2:  #bd362f !default;
 $btn-danger-bdcolor:  $btn-danger-color-2 - $btn-darken;
-$btn-inverse-color-1: #484848;
-$btn-inverse-color-2: #303030;
+$btn-inverse-color-1: #484848 !default;
+$btn-inverse-color-2: #303030 !default;
 $btn-inverse-bdcolor: $btn-inverse-color-2 - $btn-darken;
+
+$use-btn-primary: false !default;
+$use-btn-info:    false !default;
+$use-btn-success: false !default;
+$use-btn-warning: false !default;
+$use-btn-danger:  false !default;
+$use-btn-inverse: false !default;
+
 
 .btn-list {
 	@extend %downward-margin-center;
@@ -103,13 +111,6 @@ $btn-inverse-bdcolor: $btn-inverse-color-2 - $btn-darken;
 	}
 }
 
-
-$use-btn-primary: true;
-$use-btn-info:    false;
-$use-btn-success: false;
-$use-btn-warning: false;
-$use-btn-danger:  false;
-$use-btn-inverse: false;
 
 %btn-alternate {
 	color: #fff;
