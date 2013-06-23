@@ -16,6 +16,29 @@
 	min-width: 50px;
 }
 
+/* Form with labels and inputs arranged vertically.
+	<section class="form-tall-field">
+		<label class="form-tall-label"></label>
+		<input type="text" class="form-tall-input"> ?
+	</section>
+*/
+.form-tall-field {
+	@extend %downward-margin;
+}
+.form-tall-buttons {
+	@extend %downward-margin;
+	text-align: center;
+}
+
+.form-tall-label {
+	display: block;
+	margin-bottom: 4px;
+}
+.form-tall-input {
+	display: block;
+	width: 100%;
+}
+
 
 
 /*-------------------------*\
@@ -81,7 +104,7 @@ $btn-inverse-bdcolor: $btn-inverse-color-2 - $btn-darken;
 }
 
 
-$use-btn-primary: false;
+$use-btn-primary: true;
 $use-btn-info:    false;
 $use-btn-success: false;
 $use-btn-warning: false;

@@ -10,7 +10,7 @@ html {
 	color: $base-font-color;
 }
 
-body, dt, dd, pre, form, fieldset {
+body, dt, dd, pre {
 	margin: 0;
 	padding: 0;
 }
@@ -24,7 +24,7 @@ details, figcaption, figure, hgroup, menu {
 p, ul, ol, dl, blockquote {
 	@extend %downward-margin;
 }
-table {
+table, form, fieldset {
 	@extend %downward-margin-center;
 }
 
@@ -158,7 +158,7 @@ hr {
 input, button, select, textarea {
 	margin: 0;
 	padding: 4px;
-	font: inherit;
+	font-family: inherit;
 	color: inherit;
 }
 
