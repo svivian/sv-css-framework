@@ -45,7 +45,7 @@ $tsortable-bgpos-desc: 0 -20px !default;
 	}
 
 	th {
-		padding: $table-pad-kilo;
+		padding: (2 * $table-pad-unit) $table-pad-kilo;
 		background-color: $th-col-1;
 		@include linear-gradient($th-col-1, $th-col-2);
 		border-width: 1px;
