@@ -111,6 +111,7 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 	margin-left:  -$grid-gutter;
 	margin-bottom: $grid-gutter;
 
+	/* we could reset the margin here but this gives consistency with regular columns on mobile */
 	&.span-full {
 		padding-left: $grid-gutter;
 	}
