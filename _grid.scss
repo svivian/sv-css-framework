@@ -111,6 +111,10 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 	margin-left:  -$grid-gutter;
 	margin-bottom: $grid-gutter;
 
+	&.span-full {
+		padding-left: $grid-gutter;
+	}
+
 	&:last-child {
 		margin-bottom: 0;
 	}
@@ -158,14 +162,6 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 
 	.grid-wrapper {
 		width: $grid-width-lap;
-	}
-
-	.colset {
-		padding: 0;
-
-		&.span-full {
-			padding: 0 ($grid-gutter / 2);
-		}
 	}
 
 	@include device-spans ("lap");
