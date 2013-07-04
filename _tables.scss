@@ -168,6 +168,7 @@ $tsortable-bgpos-desc: 0 -20px !default;
 	font-size: $font-size-micro;
 }
 .cell-fixed {
+	width: 1px;
 	white-space: nowrap;
 }
 
