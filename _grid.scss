@@ -142,6 +142,7 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 }
 
 
+/* Mobile & Tablet */
 @media (max-width: $breakpoint-lap-end) {
 
 	/*
@@ -157,8 +158,13 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 		height: auto; /* maintain aspect ratio */
 	}
 
+	.colset.span-full, .col {
+		overflow: auto;
+	}
+
 }
 
+/* Tablet */
 @media (min-width: $breakpoint-lap-begin) and (max-width: $breakpoint-lap-end) {
 
 	.grid-wrapper {
@@ -169,8 +175,9 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 
 }
 
-/* TODO: check if `handheld` is necessary */
+/* Mobile */
 @media handheld, only screen and (max-width: $breakpoint-palm-end) {
+/* TODO: check if `handheld` is necessary */
 
 	.colset, .grid-wrapper {
 		width: auto;
@@ -181,10 +188,6 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 		width: auto;
 		float: none;
 		margin-left: 0;
-	}
-
-	.colset.span-full, .col {
-		overflow: auto;
 	}
 }
 
