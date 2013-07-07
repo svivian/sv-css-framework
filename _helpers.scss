@@ -50,7 +50,7 @@
 		<div class="figure figure-right"><img src="" alt=""><br>Caption text</div>
 */
 .figure {
-	@extend %downward-margin;
+	@extend %downward-margin-center;
 	color: $light-font-color;
 	font-size: $font-size-milli;
 	text-align: center;
