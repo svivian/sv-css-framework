@@ -70,7 +70,7 @@
 \*-------------------------*/
 
 %reset-list {
-	margin-left: 0;
+	@extend %downward-margin-center;
 	>li {
 		list-style: none;
 	}
@@ -108,14 +108,19 @@
 
 	>li {
 		display: inline-block;
-		padding: 0 $spacing-unit;
+		padding: 0 4px;
 		border-left: 1px solid #ddd;
+
+		>a {
+			padding: 4px 10px;
+		}
 
 		&:first-child {
 			border-left: 0;
 		}
 	}
 	>.title {
+		padding: 0 $spacing-unit;
 		font-weight: bold;
 	}
 }
