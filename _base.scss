@@ -10,7 +10,7 @@ html {
 	color: $base-font-color;
 }
 
-body, dt, dd, pre {
+body, dt, dd, pre, form {
 	margin: 0;
 	padding: 0;
 }
@@ -24,7 +24,7 @@ details, figcaption, figure, hgroup, menu {
 p, ul, ol, dl, blockquote {
 	@extend %downward-margin;
 }
-table, form, fieldset {
+table, fieldset {
 	@extend %downward-margin-center;
 }
 
