@@ -160,6 +160,10 @@ input, button, select, textarea {
 	padding: 4px;
 	font-family: inherit;
 	color: inherit;
+
+	&[disabled] {
+		color: #888;
+	}
 }
 
 /* Any input tag that allows text, e.g.
