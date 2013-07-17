@@ -159,7 +159,7 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 	}
 
 	.colset.span-full, .col {
-		overflow: auto;
+		overflow-x: auto;
 	}
 
 }
