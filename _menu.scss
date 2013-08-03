@@ -28,7 +28,7 @@ $hf-radius: 0 0 $hf-corner $hf-corner  !default;
 	border-radius: $hf-radius;
 
 	a {
-		color: #eee;
+		color: #ddd;
 		text-decoration: none;
 	}
 }
@@ -37,7 +37,7 @@ $hf-radius: 0 0 $hf-corner $hf-corner  !default;
 	background-color: transparent;
 	@include box-shadow(inset 1px 1px 0 rgba(255, 255, 255, .1));
 	border-right: 1px solid #000;
-	color: #eee;
+	color: #ddd;
 	text-shadow: 1px 1px 1px #000;
 	font-weight: bold;
 	text-align: center;
