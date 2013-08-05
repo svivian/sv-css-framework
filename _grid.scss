@@ -153,7 +153,7 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 		Therefore, we avoid setting `max-width` when the browser is above the grid's max width. The
 		 exact pixel widths at full resolution are listed above.
 	*/
-	img, iframe {
+	img {
 		max-width: 100%;
 		height: auto; /* maintain aspect ratio */
 	}
