@@ -84,7 +84,7 @@ $use-btn-inverse: false !default;
 
 .btn {
 	margin: 0 2px;
-	background-color: #e6e6e6;
+	background-color: $btn-def-color-2;
 	@include linear-gradient($btn-def-color-1, $btn-def-color-2);
 	@include box-shadow(inset 1px 1px 0 $light-shadow);
 	border: 1px solid $btn-def-bdcolor;
@@ -127,6 +127,7 @@ $use-btn-inverse: false !default;
 
 @if $use-btn-primary {
 	.btn-primary {
+		background-color: $btn-primary-color-2;
 		@include linear-gradient($btn-primary-color-1, $btn-primary-color-2);
 		border-color: $btn-primary-bdcolor;
 		@extend %btn-alternate;
@@ -139,6 +140,7 @@ $use-btn-inverse: false !default;
 
 @if $use-btn-info {
 	.btn-info {
+		background-color: $btn-info-color-2;
 		@include linear-gradient($btn-info-color-1, $btn-info-color-2);
 		border-color: $btn-info-bdcolor;
 		@extend %btn-alternate;
@@ -151,6 +153,7 @@ $use-btn-inverse: false !default;
 
 @if $use-btn-success {
 	.btn-success {
+		background-color: $btn-success-color-2;
 		@include linear-gradient($btn-success-color-1, $btn-success-color-2);
 		border-color: $btn-success-bdcolor;
 		@extend %btn-alternate;
@@ -163,6 +166,7 @@ $use-btn-inverse: false !default;
 
 @if $use-btn-warning {
 	.btn-warning {
+		background-color: $btn-warning-color-2;
 		@include linear-gradient($btn-warning-color-1, $btn-warning-color-2);
 		border-color: $btn-warning-bdcolor;
 		@extend %btn-alternate;
@@ -175,6 +179,7 @@ $use-btn-inverse: false !default;
 
 @if $use-btn-danger {
 	.btn-danger {
+		background-color: $btn-danger-color-2;
 		@include linear-gradient($btn-danger-color-1, $btn-danger-color-2);
 		border-color: $btn-danger-bdcolor;
 		@extend %btn-alternate;
@@ -187,6 +192,7 @@ $use-btn-inverse: false !default;
 
 @if $use-btn-inverse {
 	.btn-inverse {
+		background-color: $btn-inverse-color-2;
 		@include linear-gradient($btn-inverse-color-1, $btn-inverse-color-2);
 		border-color: $btn-inverse-bdcolor;
 		@extend %btn-alternate;
