@@ -71,6 +71,10 @@
 
 %reset-list {
 	@extend %downward-margin-center;
+	&:last-child {
+		margin-bottom: 0;
+	}
+
 	>li {
 		list-style: none;
 	}
