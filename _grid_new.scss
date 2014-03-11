@@ -1,0 +1,131 @@
+
+/* new grid test
+****************************/
+
+/* Typical usage:
+<div class="grid-wrapper"> <!-- add second class here for any custom styles e.g. borders -->
+	<div class="colset">
+		<div class="col span-8">
+			<p>Content for the wider left column. Could be in an article tag instead of div.</p>
+		</div>
+		<div class="col span-4">
+			<p>Content for the thinner right column e.g. a sidebar. Could be in an aside tag.</p>
+		</div>
+	</div>
+	<div class="colset span-full">
+		<p>Full width column here, avoids extra nested div.</p>
+	</div>
+</div>
+*/
+
+/* grid widths (including left/right padding) */
+$grid-width-desk:  1160px !default;
+$grid-width-lap:    736px !default;
+$grid-gutter:        20px !default;
+$grid-columns:       12   !default;
+$grid-extra-width:    0   !default;
+
+$scrollbar-width:    17px;
+
+$grid-unit-desk:  ($grid-width-desk - $grid-gutter) / $grid-columns;
+$grid-unit-lap:   $grid-width-lap  / $grid-columns;
+
+$breakpoint-desk-begin: $grid-width-desk + $grid-extra-width + $scrollbar-width;
+$breakpoint-lap-end:    $breakpoint-desk-begin - 1;
+$breakpoint-lap-begin:  $grid-width-lap + $grid-extra-width + $scrollbar-width;
+$breakpoint-palm-end:   $breakpoint-lap-begin - 1;
+
+
+/* Mobile-first styles */
+
+.grid-wrapper {
+	margin: 0 auto;
+}
+
+.grid-row, .grid-col {
+	@include box-sizing(border-box);
+}
+
+.grid-row {
+	// margin-bottom: $grid-gutter;
+	padding: $grid-gutter 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+
+/* Desktop */
+@media (min-width: $breakpoint-desk-begin) {
+
+	.grid-wrapper {
+		width: $grid-width-desk;
+	}
+
+	.span-1,  .desk-span-1  { width: ($grid-unit-desk     ) - $grid-gutter; }
+	.span-2,  .desk-span-2  { width: ($grid-unit-desk *  2) - $grid-gutter; }
+	.span-3,  .desk-span-3  { width: ($grid-unit-desk *  3) - $grid-gutter; }
+	.span-4,  .desk-span-4  { width: ($grid-unit-desk *  4) - $grid-gutter; }
+	.span-5,  .desk-span-5  { width: ($grid-unit-desk *  5) - $grid-gutter; }
+	.span-6,  .desk-span-6  { width: ($grid-unit-desk *  6) - $grid-gutter; }
+	.span-7,  .desk-span-7  { width: ($grid-unit-desk *  7) - $grid-gutter; }
+	.span-8,  .desk-span-8  { width: ($grid-unit-desk *  8) - $grid-gutter; }
+	.span-9,  .desk-span-9  { width: ($grid-unit-desk *  9) - $grid-gutter; }
+	.span-10, .desk-span-10 { width: ($grid-unit-desk * 10) - $grid-gutter; }
+	.span-11, .desk-span-11 { width: ($grid-unit-desk * 11) - $grid-gutter; }
+	.span-12, .desk-span-12 { width: ($grid-unit-desk * 12) - $grid-gutter; }
+}
+
+/* Tablet & Desktop */
+@media (min-width: $breakpoint-lap-begin) {
+
+	.grid-col {
+		float: left;
+		margin-left: $grid-gutter;
+	}
+
+}
+
+/* Tablet */
+@media (min-width: $breakpoint-lap-begin) and (max-width: $breakpoint-lap-end) {
+
+	.grid-wrapper {
+		width: $grid-width-lap;
+	}
+
+	.span-1,  .lap-span-1  { width: ($grid-unit-lap     ) - $grid-gutter; }
+	.span-2,  .lap-span-2  { width: ($grid-unit-lap *  2) - $grid-gutter; }
+	.span-3,  .lap-span-3  { width: ($grid-unit-lap *  3) - $grid-gutter; }
+	.span-4,  .lap-span-4  { width: ($grid-unit-lap *  4) - $grid-gutter; }
+	.span-5,  .lap-span-5  { width: ($grid-unit-lap *  5) - $grid-gutter; }
+	.span-6,  .lap-span-6  { width: ($grid-unit-lap *  6) - $grid-gutter; }
+	.span-7,  .lap-span-7  { width: ($grid-unit-lap *  7) - $grid-gutter; }
+	.span-8,  .lap-span-8  { width: ($grid-unit-lap *  8) - $grid-gutter; }
+	.span-9,  .lap-span-9  { width: ($grid-unit-lap *  9) - $grid-gutter; }
+	.span-10, .lap-span-10 { width: ($grid-unit-lap * 10) - $grid-gutter; }
+	.span-11, .lap-span-11 { width: ($grid-unit-lap * 11) - $grid-gutter; }
+	.span-12, .lap-span-12 { width: ($grid-unit-lap * 12) - $grid-gutter; }
+}
+
+/* Mobile & Tablet */
+@media (max-width: $breakpoint-lap-end) {
+}
+
+/* Mobile only */
+@media (max-width: $breakpoint-palm-end) {
+
+	.grid-col {
+		padding: ($grid-gutter / 2);
+	}
+
+}
+
+
+
