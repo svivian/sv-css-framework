@@ -1,18 +1,18 @@
-
-/* new grid test
-****************************/
+/*-------------------------*\
+|	GRID
+\*-------------------------*/
 
 /* Typical usage:
 <div class="grid-wrapper"> <!-- add second class here for any custom styles e.g. borders -->
-	<div class="colset">
-		<div class="col span-8">
+	<div class="grid-row">
+		<div class="grid-col span-8">
 			<p>Content for the wider left column. Could be in an article tag instead of div.</p>
 		</div>
-		<div class="col span-4">
+		<div class="grid-col span-4">
 			<p>Content for the thinner right column e.g. a sidebar. Could be in an aside tag.</p>
 		</div>
 	</div>
-	<div class="colset span-full">
+	<div class="grid-row span-full">
 		<p>Full width column here, avoids extra nested div.</p>
 	</div>
 </div>
@@ -70,18 +70,18 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 		width: $grid-width-desk;
 	}
 
-	.span-1,  .desk-span-1  { width: ($grid-unit-desk     ) - $grid-gutter; }
-	.span-2,  .desk-span-2  { width: ($grid-unit-desk *  2) - $grid-gutter; }
-	.span-3,  .desk-span-3  { width: ($grid-unit-desk *  3) - $grid-gutter; }
-	.span-4,  .desk-span-4  { width: ($grid-unit-desk *  4) - $grid-gutter; }
-	.span-5,  .desk-span-5  { width: ($grid-unit-desk *  5) - $grid-gutter; }
-	.span-6,  .desk-span-6  { width: ($grid-unit-desk *  6) - $grid-gutter; }
-	.span-7,  .desk-span-7  { width: ($grid-unit-desk *  7) - $grid-gutter; }
-	.span-8,  .desk-span-8  { width: ($grid-unit-desk *  8) - $grid-gutter; }
-	.span-9,  .desk-span-9  { width: ($grid-unit-desk *  9) - $grid-gutter; }
-	.span-10, .desk-span-10 { width: ($grid-unit-desk * 10) - $grid-gutter; }
-	.span-11, .desk-span-11 { width: ($grid-unit-desk * 11) - $grid-gutter; }
-	.span-12, .desk-span-12 { width: ($grid-unit-desk * 12) - $grid-gutter; }
+	.span-1,  .desk-span-1  { width: ($grid-unit-desk     ) - $grid-gutter; } // 43
+	.span-2,  .desk-span-2  { width: ($grid-unit-desk *  2) - $grid-gutter; } // 135
+	.span-3,  .desk-span-3  { width: ($grid-unit-desk *  3) - $grid-gutter; } // 228
+	.span-4,  .desk-span-4  { width: ($grid-unit-desk *  4) - $grid-gutter; } // 320
+	.span-5,  .desk-span-5  { width: ($grid-unit-desk *  5) - $grid-gutter; } // 413
+	.span-6,  .desk-span-6  { width: ($grid-unit-desk *  6) - $grid-gutter; } // 505
+	.span-7,  .desk-span-7  { width: ($grid-unit-desk *  7) - $grid-gutter; } // 597
+	.span-8,  .desk-span-8  { width: ($grid-unit-desk *  8) - $grid-gutter; } // 690
+	.span-9,  .desk-span-9  { width: ($grid-unit-desk *  9) - $grid-gutter; } // 782
+	.span-10, .desk-span-10 { width: ($grid-unit-desk * 10) - $grid-gutter; } // 875
+	.span-11, .desk-span-11 { width: ($grid-unit-desk * 11) - $grid-gutter; } // 967
+	.span-12, .desk-span-12 { width: ($grid-unit-desk * 12) - $grid-gutter; } // 1060
 }
 
 /* Tablet & Desktop */

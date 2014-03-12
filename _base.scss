@@ -29,7 +29,7 @@ table, fieldset {
 }
 
 /* headings */
-h1, h2, h3, h4, h5, h6,
+ h1,  h2,  h3,  h4,  h5,  h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	@extend %downward-margin;
 	font-family: $hN-font-family;
@@ -78,7 +78,7 @@ th, td {
 a {
 	color: $link-color;
 	text-decoration: none;
-	@include transition(color .2s);
+	@include transition(color .2s, background-color .2s);
 
 	&:hover, &:active, &:focus {
 		color: $link-hover-color;
