@@ -23,7 +23,9 @@ $grid-width-desk:  1160px !default;
 $grid-width-lap:    736px !default;
 $grid-gutter:        20px !default;
 $grid-columns:       12   !default;
+
 $grid-extra-width:    0   !default;
+$grid-spacing: $grid-gutter !default;
 
 $scrollbar-width:    17px;
 
@@ -42,13 +44,8 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 	margin: 0 auto;
 }
 
-.grid-row, .grid-col {
-	@include box-sizing(border-box);
-}
-
 .grid-row {
-	// margin-bottom: $grid-gutter;
-	padding: $grid-gutter 0;
+	padding: $grid-spacing 0;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -59,6 +56,10 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 		display: table;
 		clear: both;
 	}
+}
+
+.grid-col {
+	@include box-sizing(border-box);
 }
 
 
@@ -90,6 +91,9 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 		float: left;
 		margin-left: $grid-gutter;
 	}
+	.grid-row.span-full {
+		margin: 0 $grid-gutter;
+	}
 
 }
 
@@ -116,13 +120,33 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 
 /* Mobile & Tablet */
 @media (max-width: $breakpoint-lap-end) {
+
+	/*
+		For responsive images we need to set `max-width` to keep them inside our grid, and we need auto
+		 height to maintain the aspect ratio.
+		However, auto height prevents the browser being able to allocate space for the image even with
+		 their width and height explicitly defined in the HTML attributes and at full width.
+		Therefore, we avoid setting `max-width` when the browser is above the grid's max width. The
+		 exact pixel widths at full resolution are listed above.
+	*/
+	img {
+		max-width: 100%;
+		height: auto; /* maintain aspect ratio */
+	}
+
+	/* Prevent wide items (e.g. tables) from breaking layout */
+	.span-full, .grid-col {
+		overflow-x: auto;
+	}
+
 }
 
 /* Mobile only */
 @media (max-width: $breakpoint-palm-end) {
 
-	.grid-col {
-		padding: ($grid-gutter / 2);
+	.grid-col,
+	.grid-row.span-full {
+		padding: ($grid-spacing / 2) ($grid-gutter / 2);
 	}
 
 }
