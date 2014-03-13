@@ -98,7 +98,7 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 		margin-left: $grid-gutter;
 	}
 	.grid-row.span-full {
-		margin: 0 $grid-gutter;
+		margin-left: 0;
 	}
 
 }
@@ -152,7 +152,7 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 
 	.grid-col,
 	.grid-row.span-full {
-		padding: ($grid-spacing / 2) ($grid-gutter / 2);
+		padding: 0 ($grid-gutter / 2) ($grid-spacing / 2);
 	}
 
 }
