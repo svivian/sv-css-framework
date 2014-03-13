@@ -37,6 +37,7 @@
 	}
 }
 
+
 /*-------------------------*\
 |	IMAGES
 \*-------------------------*/
@@ -55,7 +56,6 @@
 	font-size: $font-size-milli;
 	text-align: center;
 }
-/* TODO: replace all occurrences in news */
 .figure-left {
 	float: left;
 	margin: 0 $spacing-unit $spacing-unit 0;
@@ -63,136 +63,6 @@
 .figure-right {
 	float: right;
 	margin: 0 0 $spacing-unit $spacing-unit;
-}
-
-/*-------------------------*\
-|	LISTS
-\*-------------------------*/
-
-%reset-list {
-	@extend %downward-margin-center;
-	&:last-child {
-		margin-bottom: 0;
-	}
-
-	>li {
-		list-style: none;
-	}
-}
-
-/* Simple list without bullets/numbering: <ul> */
-.blank-list {
-	@extend %reset-list;
-
-	>li {
-		margin: 2px 0;
-	}
-}
-
-/* TODO: link-list, replace .qa-related-q-item
-.link-list {
-	line-height: 1.2;
-	> li {
-		margin-bottom: ...
-	}
-}
-*/
-
-/* Horizontal list:
-	<ul class="nav-list">
-		<li class="title">Contents</li>
-		<li><a href="#">Link One</a></li>
-		<li><a href="#">Link Two</a></li>
-		<li><a href="#">Link Three</a></li>
-	</ul>
-*/
-.nav-list {
-	@extend %reset-list;
-	text-align: center;
-
-	>li {
-		display: inline-block;
-		padding: 0 4px;
-		border-left: 1px solid #ddd;
-
-		>a, >label {
-			padding: 4px 10px;
-		}
-
-		&:first-child {
-			border-left: 0;
-		}
-	}
-	>.title {
-		padding: 0 $spacing-unit;
-		font-weight: bold;
-	}
-}
-
-/* Standard definition list: <dl> */
-.glossary-list {
-	>dt {
-		margin-top: $spacing-milli;
-		font-size: $font-size-kilo;
-		color: #000;
-	}
-	>dd {
-
-	}
-}
-
-/* List of links with descriptions/dates:
-	<dl class="dl-links">
-		<dt><a href="#">Link</a></dt>
-		<dd>Posted today at 12:00</dd>
-	</dl>
- */
-.dl-links {
-	/* avoids gap on multi-line links */
-	line-height: 1.3;
-
-	>dt {
-		margin-top: $spacing-unit;
-	}
-	>dd {
-		margin: 0;
-	}
-}
-
-
-/*-------------------------*\
-|	INFOCARDS
-|	Media object variation
-\*-------------------------*/
-
-%infocard-base {
-	display: inline-block;
-	margin-bottom: $spacing-milli;
-	padding: 0 $spacing-milli $spacing-unit;
-}
-.infocard {
-	@extend %infocard-base;
-	vertical-align: top;
-}
-.infocard-img {
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 6px;
-}
-.infocard-data {
-	display: inline-block;
-	vertical-align: middle;
-	line-height: 1.3;
-}
-
-.infocard-list {
-	@extend %downward-margin-center;
-}
-.infocard-list-compact {
-	@extend %downward-margin-center;
-	>.infocard {
-		padding: 0 $spacing-milli;
-	}
 }
 
 

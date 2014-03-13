@@ -1,0 +1,81 @@
+/*-------------------------*\
+|	LISTS
+\*-------------------------*/
+
+%reset-list {
+	@extend %downward-margin-center;
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	>li {
+		list-style: none;
+	}
+}
+
+/* Simple list without bullets/numbering: <ul class="blank-list"></ul> */
+.blank-list {
+	@extend %reset-list;
+
+	>li {
+		margin: 2px 0;
+	}
+}
+
+/* Horizontal list:
+	<ul class="nav-list">
+		<li class="title">Contents</li>
+		<li><a href="#">Link One</a></li>
+		<li><a href="#">Link Two</a></li>
+		<li><a href="#">Link Three</a></li>
+	</ul>
+*/
+.nav-list {
+	@extend %reset-list;
+	text-align: center;
+
+	>li {
+		display: inline-block;
+		padding: 0 4px;
+		border-left: 1px solid #ddd;
+
+		>a, >label {
+			padding: 4px 10px;
+		}
+
+		&:first-child {
+			border-left: 0;
+		}
+	}
+	>.title {
+		padding: 0 $spacing-unit;
+		font-weight: bold;
+	}
+}
+
+/* Standard definition list: <dl> */
+.glossary-list {
+	>dt {
+		margin-top: $spacing-milli;
+		font-size: $font-size-kilo;
+		color: #000;
+	}
+}
+
+/* List of links with descriptions/dates:
+	<dl class="dl-links">
+		<dt><a href="#">Link</a></dt>
+		<dd>Posted today at 12:00</dd>
+	</dl>
+ */
+.dl-links {
+	/* avoids gap on multi-line links */
+	line-height: 1.3;
+
+	>dt {
+		margin-top: $spacing-unit;
+	}
+	>dd {
+		margin: 0;
+	}
+}
