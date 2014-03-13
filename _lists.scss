@@ -53,6 +53,26 @@
 	}
 }
 
+/* Breadcrumb trail, e.g. Home › Category › Product */
+.breadcrumb-list {
+	@extend %reset-list;
+
+	> li {
+		display: inline;
+
+		&:before {
+			content: "  \203A  ";
+			padding: 0;
+		}
+
+		// pseudos require specific order (cannot nest this above)
+		&:first-child:before {
+			content: "";
+			padding: 0;
+		}
+	}
+}
+
 /* Standard definition list: <dl> */
 .glossary-list {
 	>dt {
