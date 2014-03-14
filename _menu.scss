@@ -63,7 +63,7 @@ $hf-radius: 0 0 $hf-corner $hf-corner  !default;
 	/* submenu list item transition */
 	@include transition(background-color .1s ease-in-out);
 
-	>a {
+	> a {
 		display: block;
 		padding: 0 $hf-item-pad +px;
 		color: #fff;
@@ -84,17 +84,17 @@ $hf-radius: 0 0 $hf-corner $hf-corner  !default;
 	@extend %hf-theme-1f-ul !optional;
 
 	&:hover {
-		>li {
+		> li {
 			/* transition out for sibling menus when moving sideways */
 			@include transition(background-color $hf-anim-length ease-in-out $hf-delay-side);
 
-			>ul {
+			> ul {
 				@include transition(opacity $hf-anim-length ease-in-out $hf-delay-side, visibility $hf-anim-length ease-in-out $hf-delay-side);
 			}
 		}
 	}
 
-	>li {
+	> li {
 		position: relative;
 		list-style: none;
 		cursor: pointer;
@@ -113,7 +113,7 @@ $hf-radius: 0 0 $hf-corner $hf-corner  !default;
 			/* top item transition in */
 			@include transition(background-color $hf-anim-length ease-in-out $hf-delay-enter);
 
-			>ul {
+			> ul {
 				visibility: visible;
 				opacity: 1;
 				/* submenu transition in */
@@ -121,7 +121,7 @@ $hf-radius: 0 0 $hf-corner $hf-corner  !default;
 			}
 		}
 
-		>ul {
+		> ul {
 			visibility: hidden;
 			opacity: 0;
 			position: absolute;
@@ -136,7 +136,7 @@ $hf-radius: 0 0 $hf-corner $hf-corner  !default;
 			/* submenu transition out */
 			@include transition(opacity $hf-anim-length ease-in-out $hf-delay-exit, visibility $hf-anim-length ease-in-out $hf-delay-exit);
 
-			>li {
+			> li {
 				list-style: none;
 				padding: 0;
 				line-height: ($hf-height * .75) +px;
@@ -155,7 +155,7 @@ $hf-radius: 0 0 $hf-corner $hf-corner  !default;
 		@include box-sizing(border-box);
 		width: 100%;
 
-		>li {
+		> li {
 			@include box-sizing(border-box);
 			width: (100% / $hf-items);
 		}

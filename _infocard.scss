@@ -28,7 +28,7 @@
 }
 .infocard-list-compact {
 	@extend %downward-margin-center;
-	>.infocard {
+	> .infocard {
 		padding: 0 $spacing-milli;
 	}
 }
