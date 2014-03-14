@@ -62,7 +62,7 @@
 
 		&:before {
 			content: "  \203A  ";
-			padding: 0;
+			padding: 0 4px;
 		}
 
 		// pseudos require specific order (cannot nest this above)
