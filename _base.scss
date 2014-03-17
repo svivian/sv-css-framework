@@ -140,7 +140,7 @@ pre, code, samp, kbd {
 
 hr {
 	height: 1px;
-	margin: $spacing-unit auto;
+	margin: 0 auto $spacing-unit;
 	background: $base-border-color;
 	border: 0;
 	clear: both;
