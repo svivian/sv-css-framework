@@ -157,7 +157,7 @@ hr {
 input, button, select, textarea {
 	margin: 0;
 	padding: 4px;
-	font-family: inherit;
+	font: inherit;
 	color: inherit;
 
 	&[disabled] {
@@ -183,7 +183,6 @@ textarea {
 }
 
 select {
-	min-width: 150px;
 	font-size: $font-size-milli;
 }
 
