@@ -72,6 +72,7 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 	}
 	.grid-row {
 		margin-left: -$grid-gutter;
+	padding: 0 0 $grid-spacing;
 	}
 	.grid-col {
 		float: left;
@@ -166,7 +167,7 @@ $breakpoint-palm-end:   $breakpoint-lap-begin - 1;
 
 	.grid-col,
 	.grid-row.span-full {
-		padding: 0 ($grid-gutter / 2) ($grid-spacing / 2);
+		padding: 0 ($grid-gutter / 4) ($grid-spacing / 2);
 	}
 
 }
