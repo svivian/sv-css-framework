@@ -16,6 +16,11 @@
 	min-width: 50px;
 }
 
+.input-long-text {
+	@extend %input-text-base;
+	min-width: 500px;
+}
+
 /* Form with labels and inputs arranged vertically.
 	<section class="form-tall-field">
 		<label class="form-tall-label"></label>
