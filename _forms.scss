@@ -13,12 +13,12 @@
 
 .input-number {
 	@extend %input-text-base;
-	min-width: 50px;
+	max-width: 80px;
 }
 
 .input-long-text {
 	@extend %input-text-base;
-	min-width: 500px;
+	min-width: 580px;
 }
 
 /* Form with labels and inputs arranged vertically.
