@@ -6,7 +6,7 @@
 	<p class="nav-forward"><a href="#">Continue</a></p>
 */
 .nav-forward {
-	font-weight: bold;
+	font-weight: $bold-weight;
 	text-align: right;
 
 	> a:after {
@@ -18,7 +18,7 @@
 	<p class="nav-backward"><a href="#">go back</a></p>
 */
 .nav-backward {
-	font-weight: bold;
+	font-weight: $bold-weight;
 	text-align: left;
 
 	> a:before {
@@ -29,7 +29,7 @@
 /* Special highlighted link */
 .link-focus {
 	font-size: 115%;
-	font-weight: bold;
+	font-weight: $bold-weight;
 	margin-left: $spacing-kilo;
 
 	&:before {
@@ -89,7 +89,7 @@
 }
 .stat-summary-count {
 	font-size: $font-size-mega;
-	font-weight: bold;
+	font-weight: $bold-weight;
 }
 
 
