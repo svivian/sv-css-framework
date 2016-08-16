@@ -23,8 +23,8 @@
 
 /* Form with labels and inputs arranged vertically.
 	<section class="form-tall-field">
-		<label class="form-tall-label"></label>
-		<input type="text" class="form-tall-input"> ?
+		<label class="form-tall-label">Field</label>
+		<input type="text" class="form-tall-input">
 	</section>
 */
 .form-tall-field {
@@ -43,6 +43,21 @@
 	display: block;
 	width: 100%;
 }
+
+/* Form with labels and inputs arranged horizontally.
+	<section class="form-wide-field">
+		<label class="form-wide-label">Field</label>
+		<input type="text">
+	</section>
+*/
+.form-wide-label {
+	display: block;
+	text-align: right;
+}
+.form-wide-field {
+	margin-bottom: 10px;
+}
+
 
 
 
