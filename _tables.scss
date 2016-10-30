@@ -14,6 +14,8 @@ $table-border-lite-col: #ececec;
 $tsortable-width:      7px !default;
 $tsortable-height:     9px !default;
 $tsortable-bg:         transparent url("sort-arrows.png") no-repeat 10px 10px !default;
+$tsortable-bg-asc:     $tsortable-bg !default;
+$tsortable-bg-desc:    $tsortable-bg !default;
 $tsortable-bgpos:      0 0 !default;
 $tsortable-bgpos-asc:  0 -10px !default;
 $tsortable-bgpos-desc: 0 -20px !default;
@@ -21,8 +23,8 @@ $tsortable-bgpos-desc: 0 -20px !default;
 %sorting-arrow {
 	display: block;
 	position: absolute;
-	top: 6px;
-	right: -($table-pad-kilo + $tsortable-width);
+	top: (10px - round($tsortable-height / 2));
+	right: ceil((-$table-pad-mega / 2) - ($tsortable-width / 2));
 	content: "";
 	width: $tsortable-width;
 	height: $tsortable-height;
@@ -102,16 +104,20 @@ $tsortable-bgpos-desc: 0 -20px !default;
 .sortwrap {
 	position: relative;
 }
+
 .sorting > .sortwrap:before {
 	@extend %sorting-arrow;
+	background: $tsortable-bg;
 	background-position: $tsortable-bgpos;
 }
 .sorting-asc > .sortwrap:before {
 	@extend %sorting-arrow;
+	background: $tsortable-bg-asc;
 	background-position: $tsortable-bgpos-asc;
 }
 .sorting-desc > .sortwrap:before {
 	@extend %sorting-arrow;
+	background: $tsortable-bg-desc;
 	background-position: $tsortable-bgpos-desc;
 }
 
