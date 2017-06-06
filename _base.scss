@@ -77,7 +77,7 @@ th, td {
 a {
 	color: $link-color;
 	text-decoration: none;
-	@include transition(color .2s, background-color .2s);
+	transition: color .2s, background-color .2s;
 
 	&:hover, &:active, &:focus {
 		color: $link-hover-color;
@@ -108,7 +108,7 @@ q.dbl:after {
 }
 
 small, .small {
-	@extend %small;
+	font-size: $font-size-milli;
 }
 /* often used in conjunction with <small> */
 .aside {

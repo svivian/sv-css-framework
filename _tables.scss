@@ -150,8 +150,8 @@ $tsortable-bgpos-desc: 0 -20px !default;
 	}
 
 	th {
-		@extend %small;
 		@extend .aside;
+		font-size: $font-size-milli;
 		width: 1px;
 		white-space: nowrap;
 		text-align: right;
