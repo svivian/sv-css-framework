@@ -21,7 +21,7 @@ details, figcaption, figure, hgroup, menu {
 	display: block;
 }
 
-p, ul, ol, dl, blockquote, pre {
+p, ul, ol, dl, blockquote, pre, .section {
 	@extend %downward-margin;
 }
 table, fieldset {
